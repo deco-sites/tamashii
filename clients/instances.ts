@@ -4,7 +4,7 @@ import { createClient as createOccClient } from "$live/std/commerce/occ/client.t
 import { VTEXConfig } from "../sections/vtexconfig.global.tsx";
 
 export const defaultVTEXSettings: VTEXConfig = {
-  account: "bravtexfashionstore",
+  account: "maeztraio",
   locale: "pt-BR",
   salesChannel: "1",
 };

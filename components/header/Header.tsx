@@ -7,23 +7,33 @@ import type { NavItem as Item } from "./NavItem.ts";
 
 const item: Item[] = [
   {
-    label: "Masculino",
-    href: "/masculino",
+    label: "Exclusivo",
+    href: "/exclusivo",
     children: [
       { label: "Polos", href: "/masculino/polos" },
       { label: "Shorts", href: "/masculino/shorts" },
     ],
   },
   {
-    label: "Feminino",
-    href: "/feminino",
+    label: "Lançamentos",
+    href: "/lançamentos",
     children: [
       { label: "Roupas", href: "/feminino/roupas" },
     ],
   },
   {
-    label: "Brindes",
-    href: "/brindes",
+    label: "Linhas",
+    href: "/linhas",
+    children: [],
+  },
+  {
+    label: "Franquias",
+    href: "/franquias",
+    children: [],
+  },
+  {
+    label: "Comprar",
+    href: "/comprar",
     children: [],
   },
 ];
