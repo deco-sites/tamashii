@@ -21,9 +21,10 @@ export interface Props {
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
   preload?: boolean;
+  dots?: boolean;
 }
 
-function Carousel({ images = [], preload = false }: Props) {
+function Carousel({ images = [], preload = false, dots = true }: Props) {
   const id = useId();
 
   return (
@@ -75,31 +76,47 @@ function Carousel({ images = [], preload = false }: Props) {
           {/* Next/Prev button Controls */}
           <button
             aria-label="previous banner image"
-            class="absolute top-1/2 left-0 ml-2 text-white outline-none p-2"
+            class="absolute bg-[#ffffff] top-1/2 left-0 ml-2 text-white outline-none p-2"
             data-slider-prev
+            style={{
+              clipPath:
+                "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
+            }}
           >
-            <Icon class="w-6 h-6" id="ChevronLeft" />
+            <Icon
+              class="w-6 h-6"
+              style={{ transform: "scale(-1, 1)" }}
+              id="ChevronRight"
+            />
           </button>
           <button
             aria-label="next banner image"
-            class="absolute top-1/2 right-0 mr-2 text-white outline-none p-2"
+            class="absolute bg-[#ffffff] top-1/2 right-0 mr-2 text-white outline-none p-2"
             data-slider-next
+            style={{
+              clipPath:
+                "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
+            }}
           >
             <Icon class="w-6 h-6" id="ChevronRight" />
           </button>
 
           {/* Dots buttons, usually bellow main image */}
-          <div class="absolute w-full top-[80%] flex justify-center flex-nowrap">
-            {images.map((_, id) => (
-              <button
-                aria-label={`Display ${id} banner`}
-                class="p-2 rounded-full text-white disabled:text-gray-600 outline-none"
-                data-dot
-              >
-                <Icon class="w-6 h-6" id="Circle" />
-              </button>
-            ))}
-          </div>
+          {dots && (
+            <div class="absolute w-full top-[80%] flex justify-center flex-nowrap">
+              {images.map((_, id) => (
+                <button
+                  aria-label={`Display ${id} banner`}
+                  class="p-2 mx-1 border w-[22px] h-[22px] active:transparent focus:outline-none text-white disabled:bg-[#ffffff] outline-none"
+                  data-dot
+                  style={{
+                    transform: "skew(-18deg);",
+                  }}
+                >
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Effects for transitioning between images */}
           <Slider items={images.length} id={id} delay={5_000} />
