@@ -23,12 +23,14 @@ type AvailableIcons =
   | "Logo"
   | "Facebook"
   | "Instagram"
+  | "Twitter"
   | "Tiktok"
   | "CreditCard"
   | "Truck"
   | "Lock"
   | "ArrowLeftRight"
-  | "OtherSearch";
+  | "OtherSearch"
+  | "Deco";
 
 const mapWeightToValue: Record<IconWeight, number> = {
   bold: 24,
