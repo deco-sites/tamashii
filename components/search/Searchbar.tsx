@@ -9,6 +9,8 @@
  * no JavaScript is shipped to the browser!
  */
 
+import Icon from "../ui/Icon.tsx";
+
 export interface Props {
   /**
    * @title Placeholder
@@ -44,11 +46,7 @@ function Searchbar({
     <form
       id="searchbar"
       action={action}
-      class="flex flex-row px-2 py-0 text-xs text-left bg-[#f9f9f9]"
-      style={{
-        clipPath:
-          "polygon(10px 0, 100% 0px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
-      }}
+      class="flex flex-row px-2 py-0 text-xs text-left bg-[#f9f9f9] clip-path-10"
     >
       <input
         class="flex-grow px-2 outline-none bg-[#f9f9f9]"
@@ -62,26 +60,7 @@ function Searchbar({
         type="submit"
         class="p-2 outline-none"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="17"
-          height="17"
-          viewBox="0 0 17 17"
-          fill="none"
-        >
-          <path
-            d="M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z"
-            stroke="#1B1B1B"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M16 16L12 12"
-            stroke="#1B1B1B"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <Icon id="OtherSearch" width={24} height={24} />
       </button>
     </form>
   );

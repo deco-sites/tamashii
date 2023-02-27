@@ -21,7 +21,7 @@ export interface Props {
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
   preload?: boolean;
-  dots?: boolean;
+  dots: boolean;
 }
 
 function Carousel({ images = [], preload = false, dots = true }: Props) {
@@ -76,12 +76,8 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
           {/* Next/Prev button Controls */}
           <button
             aria-label="previous banner image"
-            class="absolute bg-[#ffffff] top-1/2 left-0 ml-2 text-white outline-none p-2"
+            class="absolute bg-[#ffffff] top-1/2 left-[10%] ml-2 text-white outline-none p-2 clip-path-5"
             data-slider-prev
-            style={{
-              clipPath:
-                "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
-            }}
           >
             <Icon
               class="w-6 h-6"
@@ -91,7 +87,7 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
           </button>
           <button
             aria-label="next banner image"
-            class="absolute bg-[#ffffff] top-1/2 right-0 mr-2 text-white outline-none p-2"
+            class="absolute bg-[#ffffff] top-1/2 right-[10%] mr-2 text-white outline-none p-2"
             data-slider-next
             style={{
               clipPath:
@@ -103,7 +99,7 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
 
           {/* Dots buttons, usually bellow main image */}
           {dots && (
-            <div class="absolute w-full top-[80%] flex justify-center flex-nowrap">
+            <div class="absolute w-full top-[90%] flex justify-center flex-nowrap">
               {images.map((_, id) => (
                 <button
                   aria-label={`Display ${id} banner`}

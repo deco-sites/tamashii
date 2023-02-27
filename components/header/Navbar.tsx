@@ -4,6 +4,7 @@ import Searchbar, {
 import Icon from "$store/components/ui/Icon.tsx";
 import CartButton from "$store/islands/CartButton.tsx";
 import Menu from "$store/islands/Menu.tsx";
+import { useRef } from "preact/hooks";
 import type { ComponentChildren } from "preact";
 
 import type { NavItem as Item } from "./NavItem.ts";
@@ -28,22 +29,24 @@ function Navbar({ searchbar, items }: {
   searchbar?: SearchbarProps;
   items: Item[];
 }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+
   return (
     <>
       {/* Mobile Version */}
       <div class="md:hidden">
-        <div class="flex justify-between items-center p-2 pb-0">
+        <div class="flex justify-between items-center px-2">
           <Menu items={items} />
 
           <a href="/" class="block max-w-[10rem]" aria-label="Store logo">
             <image src="/new-logo-tamashii.png" />
           </a>
+          <div>
+            <Icon id="OtherSearch" width={23} height={23} role="img" />
+          </div>
           <div class="flex justify-end">
             <CartButton />
           </div>
-        </div>
-        <div class="px-2 pb-2">
-          <Searchbar {...searchbar} />
         </div>
       </div>
 

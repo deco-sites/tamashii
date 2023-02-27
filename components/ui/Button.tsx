@@ -15,10 +15,10 @@ export type Props =
   };
 
 const variants = {
-  primary: "text-white bg-primary-red rounded",
-  secondary: "text-deco-black bg-custom-gray rounded",
+  primary: "text-white bg-primary-red clip-path-10",
+  secondary: "text-deco-black bg-custom-gray clip-path-10",
   tertiary: "text-deco-black bg-transparent",
-  danger: "text-white bg-primary-red-dark rounded",
+  danger: "text-white bg-primary-red-dark clip-path-10",
 };
 
 const sizes = {

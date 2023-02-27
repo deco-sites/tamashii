@@ -18,21 +18,24 @@ import * as $$3 from "./islands/LiveControls.tsx";
 import * as $$4 from "./islands/Menu.tsx";
 import * as $$5 from "./islands/SearchControls.tsx";
 import * as $$6 from "./islands/Slider.tsx";
-import * as $$$0 from "./sections/Button.story.tsx";
-import * as $$$1 from "./sections/Carousel.tsx";
-import * as $$$2 from "./sections/Features.tsx";
-import * as $$$3 from "./sections/Footer.tsx";
-import * as $$$4 from "./sections/Head.tsx";
-import * as $$$5 from "./sections/Header.tsx";
-import * as $$$6 from "./sections/Highlights.tsx";
-import * as $$$7 from "./sections/Newsletter.tsx";
-import * as $$$8 from "./sections/ProductDetails.tsx";
-import * as $$$9 from "./sections/ProductGallery.tsx";
-import * as $$$10 from "./sections/ProductShelf.tsx";
-import * as $$$11 from "./sections/SearchControls.tsx";
-import * as $$$12 from "./sections/Spacer.tsx";
-import * as $$$13 from "./sections/vtexconfig.global.tsx";
-import * as $$$14 from "$live/sections/Head.tsx";
+import * as $$$0 from "./sections/Banner.tsx";
+import * as $$$1 from "./sections/BrandSection.tsx";
+import * as $$$2 from "./sections/Button.story.tsx";
+import * as $$$3 from "./sections/Carousel.tsx";
+import * as $$$4 from "./sections/Features.tsx";
+import * as $$$5 from "./sections/Footer.tsx";
+import * as $$$6 from "./sections/Head.tsx";
+import * as $$$7 from "./sections/Header.tsx";
+import * as $$$8 from "./sections/Highlights.tsx";
+import * as $$$9 from "./sections/Instagram.tsx";
+import * as $$$10 from "./sections/Newsletter.tsx";
+import * as $$$11 from "./sections/ProductDetails.tsx";
+import * as $$$12 from "./sections/ProductGallery.tsx";
+import * as $$$13 from "./sections/ProductShelf.tsx";
+import * as $$$14 from "./sections/SearchControls.tsx";
+import * as $$$15 from "./sections/Spacer.tsx";
+import * as $$$16 from "./sections/vtexconfig.global.tsx";
+import * as $$$17 from "$live/sections/Head.tsx";
 import * as $$$$0 from "./functions/occProductDetailsPage.ts";
 import * as $$$$1 from "./functions/shopifyProductDetailsPage.ts";
 import * as $$$$2 from "./functions/shopifyProductList.ts";
@@ -69,33 +72,36 @@ const manifest: DecoManifest = {
     "./islands/Slider.tsx": $$6,
   },
   sections: {
-    "./sections/Button.story.tsx": $$$0,
-    "./sections/Carousel.tsx": $$$1,
-    "./sections/Features.tsx": $$$2,
-    "./sections/Footer.tsx": $$$3,
-    "./sections/Head.tsx": $$$4,
-    "./sections/Header.tsx": $$$5,
-    "./sections/Highlights.tsx": $$$6,
-    "./sections/Newsletter.tsx": $$$7,
-    "./sections/ProductDetails.tsx": $$$8,
-    "./sections/ProductGallery.tsx": $$$9,
-    "./sections/ProductShelf.tsx": $$$10,
-    "./sections/SearchControls.tsx": $$$11,
-    "./sections/Spacer.tsx": $$$12,
-    "./sections/vtexconfig.global.tsx": $$$13,
-    "$live/sections/Head.tsx": $$$14,
+    "./sections/Banner.tsx": $$$0,
+    "./sections/BrandSection.tsx": $$$1,
+    "./sections/Button.story.tsx": $$$2,
+    "./sections/Carousel.tsx": $$$3,
+    "./sections/Features.tsx": $$$4,
+    "./sections/Footer.tsx": $$$5,
+    "./sections/Head.tsx": $$$6,
+    "./sections/Header.tsx": $$$7,
+    "./sections/Highlights.tsx": $$$8,
+    "./sections/Instagram.tsx": $$$9,
+    "./sections/Newsletter.tsx": $$$10,
+    "./sections/ProductDetails.tsx": $$$11,
+    "./sections/ProductGallery.tsx": $$$12,
+    "./sections/ProductShelf.tsx": $$$13,
+    "./sections/SearchControls.tsx": $$$14,
+    "./sections/Spacer.tsx": $$$15,
+    "./sections/vtexconfig.global.tsx": $$$16,
+    "$live/sections/Head.tsx": $$$17,
   },
   functions: {
-    "./functions\occProductDetailsPage.ts": $$$$0,
-    "./functions\shopifyProductDetailsPage.ts": $$$$1,
-    "./functions\shopifyProductList.ts": $$$$2,
-    "./functions\shopifyProductListingPage.ts": $$$$3,
-    "./functions\vtexLegacyProductDetailsPage.ts": $$$$4,
-    "./functions\vtexLegacyProductList.ts": $$$$5,
-    "./functions\vtexLegacyProductListingPage.ts": $$$$6,
-    "./functions\vtexProductDetailsPage.ts": $$$$7,
-    "./functions\vtexProductList.ts": $$$$8,
-    "./functions\vtexProductListingPage.ts": $$$$9,
+    "./functions/occProductDetailsPage.ts": $$$$0,
+    "./functions/shopifyProductDetailsPage.ts": $$$$1,
+    "./functions/shopifyProductList.ts": $$$$2,
+    "./functions/shopifyProductListingPage.ts": $$$$3,
+    "./functions/vtexLegacyProductDetailsPage.ts": $$$$4,
+    "./functions/vtexLegacyProductList.ts": $$$$5,
+    "./functions/vtexLegacyProductListingPage.ts": $$$$6,
+    "./functions/vtexProductDetailsPage.ts": $$$$7,
+    "./functions/vtexProductList.ts": $$$$8,
+    "./functions/vtexProductListingPage.ts": $$$$9,
     "$live/functions/EffectSelectPage.ts": $$$$10,
     "$live/functions/MatchDate.ts": $$$$11,
     "$live/functions/MatchEnvironment.ts": $$$$12,
@@ -104,6 +110,129 @@ const manifest: DecoManifest = {
     "$live/functions/MatchUserAgent.ts": $$$$15,
   },
   schemas: {
+    "./sections/Banner.tsx": {
+      "inputSchema": {
+        "title": " Banner",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "title": "Image",
+              "type": "object",
+              "properties": {
+                "desktop": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Desktop",
+                  "description": "desktop otimized image",
+                },
+                "mobile": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Mobile",
+                  "description": "mobile otimized image",
+                },
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                  "description":
+                    "when user clicks on the image, go to this link",
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Alt",
+                  "description": "Image's alt text",
+                },
+              },
+              "required": [
+                "desktop",
+                "mobile",
+                "href",
+                "alt",
+              ],
+            },
+            "title": "Images",
+          },
+          "preload": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Preload",
+            "description":
+              "Check this option when this banner is the biggest image on the screen for image optimizations",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/BrandSection.tsx": {
+      "inputSchema": {
+        "title": " Brand Section",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "title": "Image",
+              "type": "object",
+              "properties": {
+                "desktop": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Desktop",
+                  "description": "desktop otimized image",
+                },
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                  "description":
+                    "when user clicks on the image, go to this link",
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Alt",
+                  "description": "Image's alt text",
+                },
+              },
+              "required": [
+                "desktop",
+                "href",
+                "alt",
+              ],
+            },
+            "title": "Images",
+          },
+          "preload": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Preload",
+            "description":
+              "Check this option when this banner is the biggest image on the screen for image optimizations",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
     "./sections/Button.story.tsx": {
       "inputSchema": {
         "title": " Button.story",
@@ -225,14 +354,13 @@ const manifest: DecoManifest = {
               "Check this option when this banner is the biggest image on the screen for image optimizations",
           },
           "dots": {
-            "type": [
-              "boolean",
-              "null",
-            ],
+            "type": "boolean",
             "title": "Dots",
           },
         },
-        "required": [],
+        "required": [
+          "dots",
+        ],
       },
       "outputSchema": null,
     },
@@ -494,6 +622,55 @@ const manifest: DecoManifest = {
         },
         "required": [
           "title",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Instagram.tsx": {
+      "inputSchema": {
+        "title": " Instagram",
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "string",
+            "title": "User",
+            "description": "instagram username e.g @instagram",
+          },
+          "leftImage": {
+            "title": "Left Image",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Desktop",
+                "description": "desktop otimized image",
+              },
+            },
+            "required": [
+              "desktop",
+            ],
+          },
+          "rightImage": {
+            "title": "Right Image",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Desktop",
+                "description": "desktop otimized image",
+              },
+            },
+            "required": [
+              "desktop",
+            ],
+          },
+        },
+        "required": [
+          "user",
+          "leftImage",
+          "rightImage",
         ],
       },
       "outputSchema": null,

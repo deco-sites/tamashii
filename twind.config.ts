@@ -30,6 +30,14 @@ const options: Omit<Options, "selfURL"> = {
         display: "none",
       },
     },
+    "clip-path-10": {
+      "clip-path":
+        "polygon(10px 0, 100% 0px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
+    },
+    "clip-path-5": {
+      "clip-path":
+        "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
+    },
   },
   theme: {
     extend: {
