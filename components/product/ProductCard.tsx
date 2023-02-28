@@ -1,6 +1,7 @@
 import { Product } from "$live/std/commerce/types.ts";
 import Image from "$live/std/ui/components/Image.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
+import Button from "../ui/Button.tsx";
 
 function ProductCard({
   url,
@@ -10,52 +11,54 @@ function ProductCard({
   offers,
 }: Product) {
   const [image] = images ?? [];
-  const { listPrice, price, installments } = useOffer(offers);
+  const { price, installments } = useOffer(offers);
 
   return (
     <div
       id={`product-card-${productID}`}
-      class="w-full p-2 border border-transparent rounded hover:border-gray-400"
+      class="p-2 border border-transparent"
     >
       <a href={url}>
         {image?.url && (
           <Image
             src={image.url}
             alt={image.alternateName}
-            width={202}
-            height={303}
+            width={340}
+            height={450}
             loading="lazy"
             decoding="async"
-            class="w-full"
+            className="m-auto"
           />
         )}
-        <div class="mt-3">
+        <div class="mt-3 text-center">
           {name && (
             <div
-              class="block text-sm overflow-hidden whitespace-nowrap uppercase mb-3"
+              class="block text-md font-bold text-white overflow-hidden whitespace-nowrap mb-3 h-[55px]"
               style={{ textOverflow: "ellipsis" }}
               href={url}
             >
               {name.replace(/(.*)(\-).*$/, "$1$2")}
             </div>
           )}
-          <div class="text-xs flex justify-start gap-2 mb-1">
-            {listPrice && (
-              <span class="text-gray-500 line-through">
-                R$ {listPrice.price.toFixed(2)}
-              </span>
-            )}
+          <div class="text-xs flex justify-center text-white gap-2 mb-1">
+            <span className="text-xl">Por:</span>
             {price && (
-              <span class="font-bold">
+              <span class="font-bold text-xl">
                 R$ {typeof price === "number" ? price.toFixed(2) : price}
               </span>
             )}
           </div>
           {installments && (
-            <div class="text-xs font-bold text-gray-500">
-              ou {installments}
+            <div class="text-sm text-white">
+              ou <strong>{installments.replace("sem juros", "")}</strong>{" "}
+              sem juros
             </div>
           )}
+        </div>
+        <div className="text-center mt-[20px]">
+          <Button as="button" class="w-[160px]">
+            <strong>COMPRAR</strong>
+          </Button>
         </div>
       </a>
     </div>

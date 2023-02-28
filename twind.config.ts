@@ -38,6 +38,20 @@ const options: Omit<Options, "selfURL"> = {
       "clip-path":
         "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
     },
+    "clip-path-polygon": {
+      "clip-path": "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
+    },
+    "after-border": {
+      "&:after": {
+        "content": "",
+        "background": "#fd0",
+        "width": "80%",
+        "height": "2px",
+        "bottom": "1px",
+        "position": "absolute",
+        "left": "6px",
+      },
+    },
   },
   theme: {
     extend: {
@@ -74,7 +88,8 @@ const options: Omit<Options, "selfURL"> = {
       },
     },
     fontFamily: {
-      sans: ["Lato", "sans-serif"],
+      sans: ["Titillium Web", "sans-serif"],
+      gang: ["gang_of_three"],
       serif: ["inherit", "serif"],
     },
     screens: {
@@ -84,6 +99,18 @@ const options: Omit<Options, "selfURL"> = {
       xl: "1280px",
       "2xl": "1536px",
     },
+  },
+  preflight: {
+    "@import":
+      `url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap')`,
+    "@font-face": [
+      {
+        fontFamily: "gang_of_three",
+        src:
+          'url("https://cdn.quatrodigital.com/tamashii/go3v2-webfont.woff2.css") format("woff2"),url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff.css") format("woff")',
+        fontWeight: 400,
+      },
+    ],
   },
 };
 

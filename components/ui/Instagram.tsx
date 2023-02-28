@@ -15,8 +15,10 @@ export interface Props {
 
 function Instagram({ user = "instagram", leftImage, rightImage }: Props) {
   return (
-    <section class="container text-center m-auto">
-      <h2 className="text-3xl font-bold mb-[10px]">SIGA NOSSO INSTAGRAM</h2>
+    <section class="container text-center m-auto pt-[80px]">
+      <h2 className="text-3xl font-bold mb-[10px] font-gang">
+        SIGA NOSSO INSTAGRAM
+      </h2>
       <h3 className="text-red-800 text-2xl font-bold mb-[40px]">@{user}</h3>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
         <img src={leftImage.desktop} alt="Left image for instagram" />

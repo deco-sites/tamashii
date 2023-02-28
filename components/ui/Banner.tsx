@@ -1,5 +1,6 @@
 import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
 import { Picture, Source } from "$live/std/ui/components/Picture.tsx";
+import { useEffect } from "preact/hooks";
 
 export interface Image {
   /** @description desktop otimized image */
@@ -22,8 +23,25 @@ export interface Props {
 }
 
 function Banner({ title, images = [], preload = true }: Props) {
+  useEffect(() => {
+    const body = document.querySelector("body");
+    console.log("oi: ", body);
+
+    if (body) {
+      body.style.backgroundImage = 'url("/bg-desktop.png")';
+      body.style.backgroundSize = "cover";
+      body.style.backgroundPosition = "top";
+    }
+  });
   return (
-    <section>
+    <section
+      className=""
+      style={{
+        background: "#1b1b1b",
+        // backgroundSize: "cover",
+        // backgroundPosition: "top",
+      }}
+    >
       {title && <h2>{title}</h2>}
       <div className={`grid grid-cols-${images.length}`}>
         {images.map((image) => (

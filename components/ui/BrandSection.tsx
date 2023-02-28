@@ -20,8 +20,10 @@ export interface Props {
 
 function BrandSection({ title, images = [], preload = true }: Props) {
   return (
-    <section className="container m-auto">
-      {title && <h2>{title}</h2>}
+    <section className="container m-auto mt-[110px]">
+      {title && (
+        <h2 className="font-gang text-lg md:text-3xl mb-[50px]">{title}</h2>
+      )}
       <div className={`grid grid-cols-${images.length}`}>
         {images.map((image) => (
           <a href={image.href}>

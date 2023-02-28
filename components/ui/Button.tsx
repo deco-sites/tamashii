@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
 
   return (
     <Component
-      className={`inline-flex items-center justify-center cursor-pointer ${
+      className={`${_class} inline-flex items-center justify-center cursor-pointer ${
         sizes[size]
       } ${variants[variant]} ${
         fits[fit]
