@@ -1,6 +1,6 @@
 import ProductCard from "$store/components/product/ProductCard.tsx";
-import type { LoaderReturnType } from "$live/std/types.ts";
-import type { Product } from "$live/std/commerce/types.ts";
+import type { LoaderReturnType } from "$live/types.ts";
+import type { Product } from "deco-sites/std/commerce/types.ts";
 
 import Slider from "../ui/Slider.tsx";
 import { useId } from "preact/hooks";
@@ -11,11 +11,11 @@ export interface Props {
   products: LoaderReturnType<Product[]>;
 }
 
-function ProductShelf({
-  title,
-  products,
-}: Props) {
+function ProductShelf(props: Props) {
+  const products = props.products || [];
+  const title = props.title || "";
   const id = useId();
+
   return (
     <div className="bg-[#1b1b1b] pb-[420px] mb-[-290px]">
       <div className="container mx-auto">

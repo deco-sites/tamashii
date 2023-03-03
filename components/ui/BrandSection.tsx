@@ -1,4 +1,4 @@
-import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
+import { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Image {
   /** @description desktop otimized image */

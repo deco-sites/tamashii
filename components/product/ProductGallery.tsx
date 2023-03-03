@@ -1,6 +1,6 @@
 import ProductCard from "$store/components/product/ProductCard.tsx";
-import type { LoaderReturnType } from "$live/std/types.ts";
-import type { ProductListingPage } from "$live/std/commerce/types.ts";
+import type { LoaderReturnType } from "$live/types.ts";
+import type { ProductListingPage } from "deco-sites/std/commerce/types.ts";
 
 export interface Props {
   page: LoaderReturnType<ProductListingPage>;

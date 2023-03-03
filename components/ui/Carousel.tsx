@@ -1,6 +1,6 @@
 import { useId } from "preact/hooks";
-import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
-import { Picture, Source } from "$live/std/ui/components/Picture.tsx";
+import { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import Slider from "$store/islands/Slider.tsx";
 
