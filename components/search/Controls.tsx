@@ -2,8 +2,8 @@ import { useRef } from "preact/hooks";
 import Filters from "$store/components/search/Filters.tsx";
 import SortSelector from "$store/components/search/SortSelector.tsx";
 import Modal from "$store/components/ui/Modal.tsx";
-import type { ProductListingPage } from "$live/std/commerce/types.ts";
-import type { LoaderReturnType } from "$live/std/types.ts";
+import type { ProductListingPage } from "deco-sites/std/commerce/types.ts";
+import type { LoaderReturnType } from "$live/types.ts";
 
 export interface Props {
   page: LoaderReturnType<ProductListingPage>;
