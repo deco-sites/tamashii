@@ -1,0 +1,19 @@
+"filename", "language", "TypeScript", "CSS", "TypeScript JSX", "comment", "blank", "total"
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\arrow\index.tsx", "TypeScript JSX", 0, 0, 13, 0, 2, 15
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\carousel\defaultProps.ts", "TypeScript", 25, 0, 0, 0, 2, 27
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\carousel\index.tsx", "TypeScript JSX", 0, 0, 307, 0, 28, 335
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\item\index.tsx", "TypeScript JSX", 0, 0, 134, 1, 6, 141
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\navigation\navigation.tsx", "TypeScript JSX", 0, 0, 25, 0, 3, 28
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\scrolling-carousel\defaultProps.ts", "TypeScript", 8, 0, 0, 0, 2, 10
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\scrolling-carousel\index.tsx", "TypeScript JSX", 0, 0, 150, 0, 21, 171
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\helpers\index.ts", "TypeScript", 232, 0, 0, 1, 38, 271
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\hooks\index.ts", "TypeScript", 27, 0, 0, 0, 5, 32
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\index.ts", "TypeScript", 2, 0, 0, 0, 1, 3
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\navigation\styles.module.css", "CSS", 0, 5, 0, 0, 1, 6
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\navigation\styles.module.css.d.ts", "TypeScript", 7, 0, 0, 0, 1, 8
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\slider\styles.module.css", "CSS", 0, 19, 0, 1, 5, 25
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\slider\styles.module.css.d.ts", "TypeScript", 10, 0, 0, 0, 1, 11
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\styles.module.css", "CSS", 0, 23, 0, 0, 5, 28
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\styles.module.css.d.ts", "TypeScript", 19, 0, 0, 0, 1, 20
+"c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\types\carousel.ts", "TypeScript", 10, 0, 0, 0, 4, 14
+"Total", "-", 340, 47, 629, 3, 126, 1145

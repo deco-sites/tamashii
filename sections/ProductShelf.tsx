@@ -7,3 +7,4 @@ function ProductShelfSection(props: Props) {
 }
 
 export default ProductShelfSection;
+export type { MultipleProducts } from "$store/components/product/ProductShelf.tsx";

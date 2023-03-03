@@ -12,12 +12,14 @@ import * as $3 from "./routes/api/[...catchall].tsx";
 import * as $4 from "./routes/index.tsx";
 import * as $5 from "./routes/inspect-vscode.ts";
 import * as $$0 from "./islands/AddToCartButton.tsx";
-import * as $$1 from "./islands/CartButton.tsx";
-import * as $$2 from "./islands/CartModal.tsx";
-import * as $$3 from "./islands/LiveControls.tsx";
-import * as $$4 from "./islands/Menu.tsx";
-import * as $$5 from "./islands/SearchControls.tsx";
-import * as $$6 from "./islands/Slider.tsx";
+import * as $$1 from "./islands/BackgroundImage.tsx";
+import * as $$2 from "./islands/CartButton.tsx";
+import * as $$3 from "./islands/CartModal.tsx";
+import * as $$4 from "./islands/LiveControls.tsx";
+import * as $$5 from "./islands/Menu.tsx";
+import * as $$6 from "./islands/SearchControls.tsx";
+import * as $$7 from "./islands/ShelfTabs.tsx";
+import * as $$8 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/Banner.tsx";
 import * as $$$1 from "./sections/BrandSection.tsx";
 import * as $$$2 from "./sections/Button.story.tsx";
@@ -43,15 +45,16 @@ import * as $$$$3 from "./functions/shopifyProductListingPage.ts";
 import * as $$$$4 from "./functions/vtexLegacyProductDetailsPage.ts";
 import * as $$$$5 from "./functions/vtexLegacyProductList.ts";
 import * as $$$$6 from "./functions/vtexLegacyProductListingPage.ts";
-import * as $$$$7 from "./functions/vtexProductDetailsPage.ts";
-import * as $$$$8 from "./functions/vtexProductList.ts";
-import * as $$$$9 from "./functions/vtexProductListingPage.ts";
-import * as $$$$10 from "$live/functions/EffectSelectPage.ts";
-import * as $$$$11 from "$live/functions/MatchDate.ts";
-import * as $$$$12 from "$live/functions/MatchEnvironment.ts";
-import * as $$$$13 from "$live/functions/MatchRandom.ts";
-import * as $$$$14 from "$live/functions/MatchSite.ts";
-import * as $$$$15 from "$live/functions/MatchUserAgent.ts";
+import * as $$$$7 from "./functions/vtexMultipleProductListing.ts";
+import * as $$$$8 from "./functions/vtexProductDetailsPage.ts";
+import * as $$$$9 from "./functions/vtexProductList.ts";
+import * as $$$$10 from "./functions/vtexProductListingPage.ts";
+import * as $$$$11 from "$live/functions/EffectSelectPage.ts";
+import * as $$$$12 from "$live/functions/MatchDate.ts";
+import * as $$$$13 from "$live/functions/MatchEnvironment.ts";
+import * as $$$$14 from "$live/functions/MatchRandom.ts";
+import * as $$$$15 from "$live/functions/MatchSite.ts";
+import * as $$$$16 from "$live/functions/MatchUserAgent.ts";
 
 const manifest: DecoManifest = {
   routes: {
@@ -64,12 +67,14 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCartButton.tsx": $$0,
-    "./islands/CartButton.tsx": $$1,
-    "./islands/CartModal.tsx": $$2,
-    "./islands/LiveControls.tsx": $$3,
-    "./islands/Menu.tsx": $$4,
-    "./islands/SearchControls.tsx": $$5,
-    "./islands/Slider.tsx": $$6,
+    "./islands/BackgroundImage.tsx": $$1,
+    "./islands/CartButton.tsx": $$2,
+    "./islands/CartModal.tsx": $$3,
+    "./islands/LiveControls.tsx": $$4,
+    "./islands/Menu.tsx": $$5,
+    "./islands/SearchControls.tsx": $$6,
+    "./islands/ShelfTabs.tsx": $$7,
+    "./islands/Slider.tsx": $$8,
   },
   sections: {
     "./sections/Banner.tsx": $$$0,
@@ -99,15 +104,16 @@ const manifest: DecoManifest = {
     "./functions/vtexLegacyProductDetailsPage.ts": $$$$4,
     "./functions/vtexLegacyProductList.ts": $$$$5,
     "./functions/vtexLegacyProductListingPage.ts": $$$$6,
-    "./functions/vtexProductDetailsPage.ts": $$$$7,
-    "./functions/vtexProductList.ts": $$$$8,
-    "./functions/vtexProductListingPage.ts": $$$$9,
-    "$live/functions/EffectSelectPage.ts": $$$$10,
-    "$live/functions/MatchDate.ts": $$$$11,
-    "$live/functions/MatchEnvironment.ts": $$$$12,
-    "$live/functions/MatchRandom.ts": $$$$13,
-    "$live/functions/MatchSite.ts": $$$$14,
-    "$live/functions/MatchUserAgent.ts": $$$$15,
+    "./functions/vtexMultipleProductListing.ts": $$$$7,
+    "./functions/vtexProductDetailsPage.ts": $$$$8,
+    "./functions/vtexProductList.ts": $$$$9,
+    "./functions/vtexProductListingPage.ts": $$$$10,
+    "$live/functions/EffectSelectPage.ts": $$$$11,
+    "$live/functions/MatchDate.ts": $$$$12,
+    "$live/functions/MatchEnvironment.ts": $$$$13,
+    "$live/functions/MatchRandom.ts": $$$$14,
+    "$live/functions/MatchSite.ts": $$$$15,
+    "$live/functions/MatchUserAgent.ts": $$$$16,
   },
   schemas: {
     "./sections/Banner.tsx": {
@@ -357,9 +363,14 @@ const manifest: DecoManifest = {
             "type": "boolean",
             "title": "Dots",
           },
+          "itemsPerPage": {
+            "type": "number",
+            "title": "Items Per Page",
+          },
         },
         "required": [
           "dots",
+          "itemsPerPage",
         ],
       },
       "outputSchema": null,
@@ -724,16 +735,23 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Title",
           },
-          "products": {
-            "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
+          "groups": {
+            "$id": "5bdc7d1d43ae7b3d6de1ec87322526dfa3386452",
             "format": "live-function",
             "type": "string",
-            "title": "Products",
+            "title": "Groups",
+          },
+          "quantityProductPerPage": {
+            "type": [
+              "number",
+              "null",
+            ],
+            "title": "Quantity Product Per Page",
           },
         },
         "required": [
           "title",
-          "products",
+          "groups",
         ],
       },
       "outputSchema": null,
@@ -1045,6 +1063,79 @@ const manifest: DecoManifest = {
         "properties": {
           "data": {
             "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+          },
+        },
+        "additionalProperties": true,
+      },
+    },
+    "./functions/vtexMultipleProductListing.ts": {
+      "inputSchema": {
+        "title": "Vtex Multiple Product Listing",
+        "type": "object",
+        "properties": {
+          "queries": {
+            "type": "array",
+            "items": {
+              "type": "string",
+            },
+            "title": "Queries",
+            "description": "queries to use on search",
+          },
+          "count": {
+            "type": "number",
+            "title": "Count",
+            "description": "total number of items to display",
+          },
+          "sort": {
+            "type": "string",
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "",
+              },
+              {
+                "type": "string",
+                "const": "price:desc",
+              },
+              {
+                "type": "string",
+                "const": "price:asc",
+              },
+              {
+                "type": "string",
+                "const": "orders:desc",
+              },
+              {
+                "type": "string",
+                "const": "name:desc",
+              },
+              {
+                "type": "string",
+                "const": "name:asc",
+              },
+              {
+                "type": "string",
+                "const": "release:desc",
+              },
+              {
+                "type": "string",
+                "const": "discount:desc",
+              },
+            ],
+            "title": "Sort",
+            "description": "search sort parameter",
+          },
+        },
+        "required": [
+          "queries",
+          "count",
+        ],
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$id": "5bdc7d1d43ae7b3d6de1ec87322526dfa3386452",
           },
         },
         "additionalProperties": true,

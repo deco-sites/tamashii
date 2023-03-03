@@ -1,6 +1,7 @@
 import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
 import { Picture, Source } from "$live/std/ui/components/Picture.tsx";
 import { useEffect } from "preact/hooks";
+import BackgroundImage from "../../islands/BackgroundImage.tsx";
 
 export interface Image {
   /** @description desktop otimized image */
@@ -23,16 +24,6 @@ export interface Props {
 }
 
 function Banner({ title, images = [], preload = true }: Props) {
-  useEffect(() => {
-    const body = document.querySelector("body");
-    console.log("oi: ", body);
-
-    if (body) {
-      body.style.backgroundImage = 'url("/bg-desktop.png")';
-      body.style.backgroundSize = "cover";
-      body.style.backgroundPosition = "top";
-    }
-  });
   return (
     <section
       className=""
@@ -72,6 +63,7 @@ function Banner({ title, images = [], preload = true }: Props) {
           </a>
         ))}
       </div>
+      <BackgroundImage />
     </section>
   );
 }

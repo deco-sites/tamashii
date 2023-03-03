@@ -1,0 +1,57 @@
+Date : 2023-03-01 11:25:44
+Directory : c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider
+Total : 17 files,  1016 codes, 3 comments, 126 blanks, all 1145 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |          5 |        629 |          1 |         60 |        690 |
+| TypeScript     |          9 |        340 |          1 |         55 |        396 |
+| CSS            |          3 |         47 |          1 |         11 |         59 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         17 |      1,016 |          3 |        126 |      1,145 |
+| . (Files)                                                                                                     |          1 |          2 |          0 |          1 |          3 |
+| components                                                                                                    |          7 |        662 |          1 |         64 |        727 |
+| components\arrow                                                                                              |          1 |         13 |          0 |          2 |         15 |
+| components\carousel                                                                                           |          2 |        332 |          0 |         30 |        362 |
+| components\item                                                                                               |          1 |        134 |          1 |          6 |        141 |
+| components\navigation                                                                                         |          1 |         25 |          0 |          3 |         28 |
+| components\scrolling-carousel                                                                                 |          2 |        158 |          0 |         23 |        181 |
+| helpers                                                                                                       |          1 |        232 |          1 |         38 |        271 |
+| hooks                                                                                                         |          1 |         27 |          0 |          5 |         32 |
+| styles                                                                                                        |          6 |         83 |          1 |         14 |         98 |
+| styles (Files)                                                                                                |          2 |         42 |          0 |          6 |         48 |
+| styles\navigation                                                                                             |          2 |         12 |          0 |          2 |         14 |
+| styles\slider                                                                                                 |          2 |         29 |          1 |          6 |         36 |
+| types                                                                                                         |          1 |         10 |          0 |          4 |         14 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                      | language       | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\arrow\index.tsx                    | TypeScript JSX |         13 |          0 |          2 |         15 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\carousel\defaultProps.ts           | TypeScript     |         25 |          0 |          2 |         27 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\carousel\index.tsx                 | TypeScript JSX |        307 |          0 |         28 |        335 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\item\index.tsx                     | TypeScript JSX |        134 |          1 |          6 |        141 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\navigation\navigation.tsx          | TypeScript JSX |         25 |          0 |          3 |         28 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\scrolling-carousel\defaultProps.ts | TypeScript     |          8 |          0 |          2 |         10 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\components\scrolling-carousel\index.tsx       | TypeScript JSX |        150 |          0 |         21 |        171 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\helpers\index.ts                              | TypeScript     |        232 |          1 |         38 |        271 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\hooks\index.ts                                | TypeScript     |         27 |          0 |          5 |         32 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\index.ts                                      | TypeScript     |          2 |          0 |          1 |          3 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\navigation\styles.module.css           | CSS            |          5 |          0 |          1 |          6 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\navigation\styles.module.css.d.ts      | TypeScript     |          7 |          0 |          1 |          8 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\slider\styles.module.css               | CSS            |         19 |          1 |          5 |         25 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\slider\styles.module.css.d.ts          | TypeScript     |         10 |          0 |          1 |         11 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\styles.module.css                      | CSS            |         23 |          0 |          5 |         28 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\styles\styles.module.css.d.ts                 | TypeScript     |         19 |          0 |          1 |         20 |
+| c:\Users\dougl\Desktop\projetos\tamashii.deco\components\slider\types\carousel.ts                             | TypeScript     |         10 |          0 |          4 |         14 |
+| Total                                                                                                         |                |      1,016 |          3 |        126 |      1,145 |
++---------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

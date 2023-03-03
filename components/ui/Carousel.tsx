@@ -22,11 +22,15 @@ export interface Props {
    */
   preload?: boolean;
   dots: boolean;
+  itemsPerPage: number;
 }
 
-function Carousel({ images = [], preload = false, dots = true }: Props) {
-  const id = useId();
-
+function Carousel(
+  { images = [], preload = false, dots = true, itemsPerPage = 1 }: Props,
+) {
+  const id = "main-banner";
+  const imageWidthInVw = images?.length > 1 ? 100 / itemsPerPage : 100;
+  const nOfPages = Math.ceil(images?.length / itemsPerPage) || 1;
   return (
     <div
       id={id}
@@ -35,7 +39,7 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
       <ul
         data-slider-content
         class="flex flex-nowrap transition"
-        style={{ width: `calc(${images.length}*100vw)` }}
+        style={{ width: `calc(${images.length}*${imageWidthInVw}vw)` }}
       >
         {images.map(({ desktop, mobile, href, alt }, index) => {
           const lcp = index === 0 && preload;
@@ -43,7 +47,7 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
           return (
             <li>
               <a href={href}>
-                <Picture class="w-screen block" preload={lcp}>
+                <Picture class={`w-[${imageWidthInVw}vw] block`} preload={lcp}>
                   <Source
                     media="(max-width: 767px)"
                     fetchPriority={lcp ? "high" : "auto"}
@@ -100,7 +104,7 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
           {/* Dots buttons, usually bellow main image */}
           {dots && (
             <div class="absolute w-full top-[90%] flex justify-center flex-nowrap">
-              {images.map((_, id) => (
+              {Array(nOfPages).fill(0).map((_, id) => (
                 <button
                   aria-label={`Display ${id} banner`}
                   class="p-2 mx-1 border w-[22px] h-[22px] active:transparent focus:outline-none text-white disabled:bg-[#ffffff] outline-none"
@@ -115,7 +119,12 @@ function Carousel({ images = [], preload = false, dots = true }: Props) {
           )}
 
           {/* Effects for transitioning between images */}
-          <Slider items={images.length} id={id} delay={5_000} />
+          <Slider
+            items={images.length}
+            id={id}
+            delay={5_000}
+            nOfPages={nOfPages}
+          />
         </>
       )}
     </div>

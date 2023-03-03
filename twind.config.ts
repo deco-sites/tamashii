@@ -41,17 +41,6 @@ const options: Omit<Options, "selfURL"> = {
     "clip-path-polygon": {
       "clip-path": "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
     },
-    "after-border": {
-      "&:after": {
-        "content": "",
-        "background": "#fd0",
-        "width": "80%",
-        "height": "2px",
-        "bottom": "1px",
-        "position": "absolute",
-        "left": "6px",
-      },
-    },
   },
   theme: {
     extend: {

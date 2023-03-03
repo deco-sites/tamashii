@@ -16,9 +16,7 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "prefetch": "https://deno.land/x/prefetch@0.0.6/mod.ts",
-    "react-slick": "https://esm.sh/react-slick@0.29.0",
-    "react-slick/": "https://esm.sh/react-slick@0.29.0/",
-    "react-media": "https://esm.sh/react-media@1.10.0",
-    "react-media/": "https://esm.sh/react-media@1.10.0/"
+    "carousel": "https://esm.sh/@trendyol-js/react-carousel@3.0.2",
+    "carousel/": "https://esm.sh/@trendyol-js/react-carousel@3.0.2/"
   }
 }
