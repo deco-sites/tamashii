@@ -54,1365 +54,1365 @@ import * as $$$$14 from "$live/functions/MatchSite.ts";
 import * as $$$$15 from "$live/functions/MatchUserAgent.ts";
 
 const manifest: DecoManifest = {
-  routes: {
-    "./routes/[...catchall].tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/_middleware.ts": $2,
-    "./routes/api/[...catchall].tsx": $3,
-    "./routes/index.tsx": $4,
-    "./routes/inspect-vscode.ts": $5,
-  },
-  islands: {
-    "./islands/AddToCartButton.tsx": $$0,
-    "./islands/CartButton.tsx": $$1,
-    "./islands/CartModal.tsx": $$2,
-    "./islands/LiveControls.tsx": $$3,
-    "./islands/Menu.tsx": $$4,
-    "./islands/SearchControls.tsx": $$5,
-    "./islands/Slider.tsx": $$6,
-  },
-  sections: {
-    "./sections/Banner.tsx": $$$0,
-    "./sections/BrandSection.tsx": $$$1,
-    "./sections/Button.story.tsx": $$$2,
-    "./sections/Carousel.tsx": $$$3,
-    "./sections/Features.tsx": $$$4,
-    "./sections/Footer.tsx": $$$5,
-    "./sections/Head.tsx": $$$6,
-    "./sections/Header.tsx": $$$7,
-    "./sections/Highlights.tsx": $$$8,
-    "./sections/Instagram.tsx": $$$9,
-    "./sections/Newsletter.tsx": $$$10,
-    "./sections/ProductDetails.tsx": $$$11,
-    "./sections/ProductGallery.tsx": $$$12,
-    "./sections/ProductShelf.tsx": $$$13,
-    "./sections/SearchControls.tsx": $$$14,
-    "./sections/Spacer.tsx": $$$15,
-    "./sections/vtexconfig.global.tsx": $$$16,
-    "$live/sections/Head.tsx": $$$17,
-  },
-  functions: {
-    "./functions/occProductDetailsPage.ts": $$$$0,
-    "./functions/shopifyProductDetailsPage.ts": $$$$1,
-    "./functions/shopifyProductList.ts": $$$$2,
-    "./functions/shopifyProductListingPage.ts": $$$$3,
-    "./functions/vtexLegacyProductDetailsPage.ts": $$$$4,
-    "./functions/vtexLegacyProductList.ts": $$$$5,
-    "./functions/vtexLegacyProductListingPage.ts": $$$$6,
-    "./functions/vtexProductDetailsPage.ts": $$$$7,
-    "./functions/vtexProductList.ts": $$$$8,
-    "./functions/vtexProductListingPage.ts": $$$$9,
-    "$live/functions/EffectSelectPage.ts": $$$$10,
-    "$live/functions/MatchDate.ts": $$$$11,
-    "$live/functions/MatchEnvironment.ts": $$$$12,
-    "$live/functions/MatchRandom.ts": $$$$13,
-    "$live/functions/MatchSite.ts": $$$$14,
-    "$live/functions/MatchUserAgent.ts": $$$$15,
-  },
-  schemas: {
-    "./sections/Banner.tsx": {
-      "inputSchema": {
-        "title": " Banner",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Title",
-          },
-          "images": {
-            "type": "array",
-            "items": {
-              "title": "Image",
-              "type": "object",
-              "properties": {
-                "desktop": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Desktop",
-                  "description": "desktop otimized image",
-                },
-                "mobile": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Mobile",
-                  "description": "mobile otimized image",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                  "description":
-                    "when user clicks on the image, go to this link",
-                },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
-                  "description": "Image's alt text",
-                },
-              },
-              "required": [
-                "desktop",
-                "mobile",
-                "href",
-                "alt",
-              ],
-            },
-            "title": "Images",
-          },
-          "preload": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Preload",
-            "description":
-              "Check this option when this banner is the biggest image on the screen for image optimizations",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
+    routes: {
+        "./routes/[...catchall].tsx": $0,
+        "./routes/_app.tsx": $1,
+        "./routes/_middleware.ts": $2,
+        "./routes/api/[...catchall].tsx": $3,
+        "./routes/index.tsx": $4,
+        "./routes/inspect-vscode.ts": $5,
     },
-    "./sections/BrandSection.tsx": {
-      "inputSchema": {
-        "title": " Brand Section",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Title",
-          },
-          "images": {
-            "type": "array",
-            "items": {
-              "title": "Image",
-              "type": "object",
-              "properties": {
-                "desktop": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Desktop",
-                  "description": "desktop otimized image",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                  "description":
-                    "when user clicks on the image, go to this link",
-                },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
-                  "description": "Image's alt text",
-                },
-              },
-              "required": [
-                "desktop",
-                "href",
-                "alt",
-              ],
-            },
-            "title": "Images",
-          },
-          "preload": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Preload",
-            "description":
-              "Check this option when this banner is the biggest image on the screen for image optimizations",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
+    islands: {
+        "./islands/AddToCartButton.tsx": $$0,
+        "./islands/CartButton.tsx": $$1,
+        "./islands/CartModal.tsx": $$2,
+        "./islands/LiveControls.tsx": $$3,
+        "./islands/Menu.tsx": $$4,
+        "./islands/SearchControls.tsx": $$5,
+        "./islands/Slider.tsx": $$6,
     },
-    "./sections/Button.story.tsx": {
-      "inputSchema": {
-        "title": " Button.story",
-        "type": "object",
-        "properties": {
-          "variant": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "primary",
-              },
-              {
-                "type": "string",
-                "const": "secondary",
-              },
-              {
-                "type": "string",
-                "const": "tertiary",
-              },
-              {
-                "type": "string",
-                "const": "danger",
-              },
-            ],
-            "title": "Variant",
-          },
-          "size": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "small",
-              },
-              {
-                "type": "string",
-                "const": "large",
-              },
-            ],
-            "title": "Size",
-          },
-          "fit": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "container",
-              },
-              {
-                "type": "string",
-                "const": "content",
-              },
-            ],
-            "title": "Fit",
-          },
-          "loading": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Loading",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
+    sections: {
+        "./sections/Banner.tsx": $$$0,
+        "./sections/BrandSection.tsx": $$$1,
+        "./sections/Button.story.tsx": $$$2,
+        "./sections/Carousel.tsx": $$$3,
+        "./sections/Features.tsx": $$$4,
+        "./sections/Footer.tsx": $$$5,
+        "./sections/Head.tsx": $$$6,
+        "./sections/Header.tsx": $$$7,
+        "./sections/Highlights.tsx": $$$8,
+        "./sections/Instagram.tsx": $$$9,
+        "./sections/Newsletter.tsx": $$$10,
+        "./sections/ProductDetails.tsx": $$$11,
+        "./sections/ProductGallery.tsx": $$$12,
+        "./sections/ProductShelf.tsx": $$$13,
+        "./sections/SearchControls.tsx": $$$14,
+        "./sections/Spacer.tsx": $$$15,
+        "./sections/vtexconfig.global.tsx": $$$16,
+        "$live/sections/Head.tsx": $$$17,
     },
-    "./sections/Carousel.tsx": {
-      "inputSchema": {
-        "title": " Carousel",
-        "type": "object",
-        "properties": {
-          "images": {
-            "type": "array",
-            "items": {
-              "title": "Image",
-              "type": "object",
-              "properties": {
-                "desktop": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Desktop",
-                  "description": "desktop otimized image",
-                },
-                "mobile": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Mobile",
-                  "description": "mobile otimized image",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                  "description":
-                    "when user clicks on the image, go to this link",
-                },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
-                  "description": "Image's alt text",
-                },
-              },
-              "required": [
-                "desktop",
-                "mobile",
-                "href",
-                "alt",
-              ],
-            },
-            "title": "Images",
-          },
-          "preload": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Preload",
-            "description":
-              "Check this option when this banner is the biggest image on the screen for image optimizations",
-          },
-          "dots": {
-            "type": "boolean",
-            "title": "Dots",
-          },
-        },
-        "required": [
-          "dots",
-        ],
-      },
-      "outputSchema": null,
+    functions: {
+        "./functions/occProductDetailsPage.ts": $$$$0,
+        "./functions/shopifyProductDetailsPage.ts": $$$$1,
+        "./functions/shopifyProductList.ts": $$$$2,
+        "./functions/shopifyProductListingPage.ts": $$$$3,
+        "./functions/vtexLegacyProductDetailsPage.ts": $$$$4,
+        "./functions/vtexLegacyProductList.ts": $$$$5,
+        "./functions/vtexLegacyProductListingPage.ts": $$$$6,
+        "./functions/vtexProductDetailsPage.ts": $$$$7,
+        "./functions/vtexProductList.ts": $$$$8,
+        "./functions/vtexProductListingPage.ts": $$$$9,
+        "$live/functions/EffectSelectPage.ts": $$$$10,
+        "$live/functions/MatchDate.ts": $$$$11,
+        "$live/functions/MatchEnvironment.ts": $$$$12,
+        "$live/functions/MatchRandom.ts": $$$$13,
+        "$live/functions/MatchSite.ts": $$$$14,
+        "$live/functions/MatchUserAgent.ts": $$$$15,
     },
-    "./sections/Features.tsx": {
-      "inputSchema": {
-        "title": " Features",
-        "type": "object",
-        "properties": {
-          "features": {
-            "type": "array",
-            "items": {
-              "title": "Feature",
-              "type": "object",
-              "properties": {
-                "src": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Src",
-                  "description": "Image src",
-                },
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "description": "Title",
-                },
-                "description": {
-                  "type": "string",
-                  "title": "Description",
-                  "description": "Description and Image alt text",
-                },
-              },
-              "required": [
-                "src",
-                "title",
-                "description",
-              ],
-            },
-            "title": "Features",
-          },
-        },
-        "required": [
-          "features",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Footer.tsx": {
-      "inputSchema": null,
-      "outputSchema": null,
-    },
-    "./sections/Head.tsx": {
-      "inputSchema": {
-        "title": " Head",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Title",
-          },
-          "description": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Description",
-          },
-          "url": {
-            "type": "string",
-            "title": "Url",
-          },
-          "imageUrl": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Image Url",
-          },
-          "faviconUrl": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Favicon Url",
-          },
-          "styleUrls": {
-            "type": "array",
-            "items": {
-              "type": "string",
-            },
-            "title": "Style Urls",
-          },
-          "themeColor": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Theme Color",
-          },
-        },
-        "required": [
-          "url",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Header.tsx": {
-      "inputSchema": {
-        "title": " Header",
-        "type": "object",
-        "properties": {
-          "alerts": {
-            "type": "array",
-            "items": {
-              "type": "string",
-            },
-            "title": "Alerts",
-          },
-          "searchbar": {
-            "title": "Search Bar",
-            "type": "object",
-            "properties": {
-              "placeholder": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Placeholder",
-                "description": "Search bar default placeholder message",
-                "default": "What are you looking for?",
-              },
-              "action": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Page path",
-                "description":
-                  "When user clicks on the search button, navigate it to",
-                "default": "/s",
-              },
-              "name": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Term name",
-                "description":
-                  "Querystring param used when navigating the user",
-                "default": "q",
-              },
-              "query": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Query",
-              },
-            },
-            "required": [],
-          },
-          "navItems": {
-            "type": "array",
-            "items": {
-              "title": "Item",
-              "type": "object",
-              "properties": {
-                "label": {
-                  "type": "string",
-                  "title": "Label",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                },
-                "children": {
-                  "title": "Children",
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "label": {
-                        "type": "string",
-                        "title": "Label",
-                      },
-                      "href": {
-                        "type": "string",
-                        "title": "Href",
-                      },
+    schemas: {
+        "./sections/Banner.tsx": {
+            "inputSchema": {
+                "title": " Banner",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Title",
                     },
-                    "required": [
-                      "label",
-                      "href",
-                    ],
-                  },
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "title": "Image",
+                            "type": "object",
+                            "properties": {
+                                "desktop": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Desktop",
+                                    "description": "desktop otimized image",
+                                },
+                                "mobile": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Mobile",
+                                    "description": "mobile otimized image",
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description":
+                                        "when user clicks on the image, go to this link",
+                                },
+                                "alt": {
+                                    "type": "string",
+                                    "title": "Alt",
+                                    "description": "Image's alt text",
+                                },
+                            },
+                            "required": [
+                                "desktop",
+                                "mobile",
+                                "href",
+                                "alt",
+                            ],
+                        },
+                        "title": "Images",
+                    },
+                    "preload": {
+                        "type": [
+                            "boolean",
+                            "null",
+                        ],
+                        "title": "Preload",
+                        "description":
+                            "Check this option when this banner is the biggest image on the screen for image optimizations",
+                    },
                 },
-              },
-              "required": [
-                "label",
-                "href",
-                "children",
-              ],
+                "required": [],
             },
-            "title": "Navigation items",
-            "description":
-              "Navigation items used both on mobile and desktop menus",
-          },
+            "outputSchema": null,
         },
-        "required": [
-          "alerts",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Highlights.tsx": {
-      "inputSchema": {
-        "title": " Highlights",
-        "type": "object",
-        "properties": {
-          "highlights": {
-            "type": "array",
-            "items": {
-              "title": "Highlight",
-              "type": "object",
-              "properties": {
-                "src": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Src",
+        "./sections/BrandSection.tsx": {
+            "inputSchema": {
+                "title": " Brand Section",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Title",
+                    },
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "title": "Image",
+                            "type": "object",
+                            "properties": {
+                                "desktop": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Desktop",
+                                    "description": "desktop otimized image",
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description":
+                                        "when user clicks on the image, go to this link",
+                                },
+                                "alt": {
+                                    "type": "string",
+                                    "title": "Alt",
+                                    "description": "Image's alt text",
+                                },
+                            },
+                            "required": [
+                                "desktop",
+                                "href",
+                                "alt",
+                            ],
+                        },
+                        "title": "Images",
+                    },
+                    "preload": {
+                        "type": [
+                            "boolean",
+                            "null",
+                        ],
+                        "title": "Preload",
+                        "description":
+                            "Check this option when this banner is the biggest image on the screen for image optimizations",
+                    },
                 },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
+                "required": [],
+            },
+            "outputSchema": null,
+        },
+        "./sections/Button.story.tsx": {
+            "inputSchema": {
+                "title": " Button.story",
+                "type": "object",
+                "properties": {
+                    "variant": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "primary",
+                            },
+                            {
+                                "type": "string",
+                                "const": "secondary",
+                            },
+                            {
+                                "type": "string",
+                                "const": "tertiary",
+                            },
+                            {
+                                "type": "string",
+                                "const": "danger",
+                            },
+                        ],
+                        "title": "Variant",
+                    },
+                    "size": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "small",
+                            },
+                            {
+                                "type": "string",
+                                "const": "large",
+                            },
+                        ],
+                        "title": "Size",
+                    },
+                    "fit": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "container",
+                            },
+                            {
+                                "type": "string",
+                                "const": "content",
+                            },
+                        ],
+                        "title": "Fit",
+                    },
+                    "loading": {
+                        "type": [
+                            "boolean",
+                            "null",
+                        ],
+                        "title": "Loading",
+                    },
                 },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
+                "required": [],
+            },
+            "outputSchema": null,
+        },
+        "./sections/Carousel.tsx": {
+            "inputSchema": {
+                "title": " Carousel",
+                "type": "object",
+                "properties": {
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "title": "Image",
+                            "type": "object",
+                            "properties": {
+                                "desktop": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Desktop",
+                                    "description": "desktop otimized image",
+                                },
+                                "mobile": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Mobile",
+                                    "description": "mobile otimized image",
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description":
+                                        "when user clicks on the image, go to this link",
+                                },
+                                "alt": {
+                                    "type": "string",
+                                    "title": "Alt",
+                                    "description": "Image's alt text",
+                                },
+                            },
+                            "required": [
+                                "desktop",
+                                "mobile",
+                                "href",
+                                "alt",
+                            ],
+                        },
+                        "title": "Images",
+                    },
+                    "preload": {
+                        "type": [
+                            "boolean",
+                            "null",
+                        ],
+                        "title": "Preload",
+                        "description":
+                            "Check this option when this banner is the biggest image on the screen for image optimizations",
+                    },
+                    "dots": {
+                        "type": "boolean",
+                        "title": "Dots",
+                    },
                 },
-                "label": {
-                  "type": "string",
-                  "title": "Label",
+                "required": [
+                    "dots",
+                ],
+            },
+            "outputSchema": null,
+        },
+        "./sections/Features.tsx": {
+            "inputSchema": {
+                "title": " Features",
+                "type": "object",
+                "properties": {
+                    "features": {
+                        "type": "array",
+                        "items": {
+                            "title": "Feature",
+                            "type": "object",
+                            "properties": {
+                                "src": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Src",
+                                    "description": "Image src",
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title",
+                                    "description": "Title",
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "title": "Description",
+                                    "description": "Description and Image alt text",
+                                },
+                            },
+                            "required": [
+                                "src",
+                                "title",
+                                "description",
+                            ],
+                        },
+                        "title": "Features",
+                    },
                 },
-              },
-              "required": [
-                "src",
-                "alt",
-                "href",
-                "label",
-              ],
+                "required": [
+                    "features",
+                ],
             },
-            "title": "Highlights",
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
+            "outputSchema": null,
         },
-        "required": [
-          "title",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Instagram.tsx": {
-      "inputSchema": {
-        "title": " Instagram",
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string",
-            "title": "User",
-            "description": "instagram username e.g @instagram",
-          },
-          "leftImage": {
-            "title": "Left Image",
-            "type": "object",
-            "properties": {
-              "desktop": {
-                "format": "image-uri",
-                "type": "string",
-                "title": "Desktop",
-                "description": "desktop otimized image",
-              },
+        "./sections/Footer.tsx": {
+            "inputSchema": null,
+            "outputSchema": null,
+        },
+        "./sections/Head.tsx": {
+            "inputSchema": {
+                "title": " Head",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Title",
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Description",
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                    },
+                    "imageUrl": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Image Url",
+                    },
+                    "faviconUrl": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Favicon Url",
+                    },
+                    "styleUrls": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Style Urls",
+                    },
+                    "themeColor": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Theme Color",
+                    },
+                },
+                "required": [
+                    "url",
+                ],
             },
-            "required": [
-              "desktop",
-            ],
-          },
-          "rightImage": {
-            "title": "Right Image",
-            "type": "object",
-            "properties": {
-              "desktop": {
-                "format": "image-uri",
-                "type": "string",
-                "title": "Desktop",
-                "description": "desktop otimized image",
-              },
+            "outputSchema": null,
+        },
+        "./sections/Header.tsx": {
+            "inputSchema": {
+                "title": " Header",
+                "type": "object",
+                "properties": {
+                    "alerts": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Alerts",
+                    },
+                    "searchbar": {
+                        "title": "Search Bar",
+                        "type": "object",
+                        "properties": {
+                            "placeholder": {
+                                "type": [
+                                    "string",
+                                    "null",
+                                ],
+                                "title": "Placeholder",
+                                "description": "Search bar default placeholder message",
+                                "default": "What are you looking for?",
+                            },
+                            "action": {
+                                "type": [
+                                    "string",
+                                    "null",
+                                ],
+                                "title": "Page path",
+                                "description":
+                                    "When user clicks on the search button, navigate it to",
+                                "default": "/s",
+                            },
+                            "name": {
+                                "type": [
+                                    "string",
+                                    "null",
+                                ],
+                                "title": "Term name",
+                                "description":
+                                    "Querystring param used when navigating the user",
+                                "default": "q",
+                            },
+                            "query": {
+                                "type": [
+                                    "string",
+                                    "null",
+                                ],
+                                "title": "Query",
+                            },
+                        },
+                        "required": [],
+                    },
+                    "navItems": {
+                        "type": "array",
+                        "items": {
+                            "title": "Item",
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string",
+                                    "title": "Label",
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                },
+                                "children": {
+                                    "title": "Children",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string",
+                                                "title": "Label",
+                                            },
+                                            "href": {
+                                                "type": "string",
+                                                "title": "Href",
+                                            },
+                                        },
+                                        "required": [
+                                            "label",
+                                            "href",
+                                        ],
+                                    },
+                                },
+                            },
+                            "required": [
+                                "label",
+                                "href",
+                                "children",
+                            ],
+                        },
+                        "title": "Navigation items",
+                        "description":
+                            "Navigation items used both on mobile and desktop menus",
+                    },
+                },
+                "required": [
+                    "alerts",
+                ],
             },
-            "required": [
-              "desktop",
-            ],
-          },
+            "outputSchema": null,
         },
-        "required": [
-          "user",
-          "leftImage",
-          "rightImage",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Newsletter.tsx": {
-      "inputSchema": null,
-      "outputSchema": null,
-    },
-    "./sections/ProductDetails.tsx": {
-      "inputSchema": {
-        "title": " Product Details",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "b2292095e0693e384797226e3c80454d5b11e5df",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/ProductGallery.tsx": {
-      "inputSchema": {
-        "title": " Product Gallery",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/ProductShelf.tsx": {
-      "inputSchema": {
-        "title": " Product Shelf",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
-          "products": {
-            "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
-            "format": "live-function",
-            "type": "string",
-            "title": "Products",
-          },
-        },
-        "required": [
-          "title",
-          "products",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/SearchControls.tsx": {
-      "inputSchema": {
-        "title": " Search Controls",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Spacer.tsx": {
-      "inputSchema": {
-        "title": " Spacer",
-        "type": "object",
-        "properties": {
-          "height": {
-            "title": "Height",
-            "type": "object",
-            "properties": {
-              "mobile": {
-                "type": "number",
-                "title": "Mobile",
-              },
-              "desktop": {
-                "type": "number",
-                "title": "Desktop",
-              },
+        "./sections/Highlights.tsx": {
+            "inputSchema": {
+                "title": " Highlights",
+                "type": "object",
+                "properties": {
+                    "highlights": {
+                        "type": "array",
+                        "items": {
+                            "title": "Highlight",
+                            "type": "object",
+                            "properties": {
+                                "src": {
+                                    "format": "image-uri",
+                                    "type": "string",
+                                    "title": "Src",
+                                },
+                                "alt": {
+                                    "type": "string",
+                                    "title": "Alt",
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                },
+                                "label": {
+                                    "type": "string",
+                                    "title": "Label",
+                                },
+                            },
+                            "required": [
+                                "src",
+                                "alt",
+                                "href",
+                                "label",
+                            ],
+                        },
+                        "title": "Highlights",
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                    },
+                },
+                "required": [
+                    "title",
+                ],
             },
-            "required": [
-              "mobile",
-              "desktop",
-            ],
-          },
+            "outputSchema": null,
         },
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/vtexconfig.global.tsx": {
-      "inputSchema": {
-        "title": "Vtexconfig.global",
-        "type": "object",
-        "properties": {
-          "account": {
-            "type": "string",
-            "title": "Account",
-            "description":
-              "VTEX Account name. For more info, read here: https://help.vtex.com/en/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC.",
-          },
-          "salesChannel": {
-            "type": "string",
-            "title": "Sales Channel",
-            "description":
-              "VTEX sales channel. This will be the default sales channel your site. For more info, read here: https://help.vtex.com/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV",
-          },
-          "locale": {
-            "type": "string",
-            "title": "Locale",
-            "description": "Locale used for VTEX Intelligent Search client.",
-          },
-        },
-        "required": [
-          "account",
-          "salesChannel",
-          "locale",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./functions/occProductDetailsPage.ts": {
-      "inputSchema": {
-        "type": "null",
-        "title": "Occ Product Details Page",
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/shopifyProductDetailsPage.ts": {
-      "inputSchema": {
-        "type": "null",
-        "title": "Shopify Product Details Page",
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/shopifyProductList.ts": {
-      "inputSchema": {
-        "title": "Shopify Product List",
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "string",
-            "title": "Query",
-            "description": "search term to use on search",
-          },
-          "count": {
-            "type": "number",
-            "title": "Count",
-            "description": "total number of items to display",
-          },
-        },
-        "required": [
-          "query",
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/shopifyProductListingPage.ts": {
-      "inputSchema": {
-        "title": "Shopify Product Listing Page",
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Query",
-            "description": "overides the query term",
-          },
-          "count": {
-            "type": "number",
-            "title": "Items per page",
-            "description": "number of products per page to display",
-          },
-        },
-        "required": [
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexLegacyProductDetailsPage.ts": {
-      "inputSchema": {
-        "type": "null",
-        "title": "Vtex Legacy Product Details Page",
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexLegacyProductList.ts": {
-      "inputSchema": {
-        "title": "Vtex Legacy Product List",
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "string",
-            "title": "Query",
-            "description": "query to use on search",
-          },
-          "count": {
-            "type": "number",
-            "title": "Count",
-            "description": "total number of items to display",
-          },
-          "sort": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "",
-              },
-              {
-                "type": "string",
-                "const": "price:desc",
-              },
-              {
-                "type": "string",
-                "const": "price:asc",
-              },
-              {
-                "type": "string",
-                "const": "orders:desc",
-              },
-              {
-                "type": "string",
-                "const": "name:desc",
-              },
-              {
-                "type": "string",
-                "const": "name:asc",
-              },
-              {
-                "type": "string",
-                "const": "release:desc",
-              },
-              {
-                "type": "string",
-                "const": "discount:desc",
-              },
-            ],
-            "title": "Sort",
-            "description": "search sort parameter",
-          },
-        },
-        "required": [
-          "query",
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexLegacyProductListingPage.ts": {
-      "inputSchema": {
-        "title": "Vtex Legacy Product Listing Page",
-        "type": "object",
-        "properties": {
-          "term": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Term",
-            "description": "overides the query term",
-          },
-          "count": {
-            "type": "number",
-            "title": "Items per page",
-            "description": "number of products per page to display",
-          },
-          "ft": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Ft",
-            "description": "FullText term",
-          },
-          "fq": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Fq",
-          },
-          "map": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Map",
-            "description": "map param",
-          },
-        },
-        "required": [
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexProductDetailsPage.ts": {
-      "inputSchema": {
-        "type": "null",
-        "title": "Vtex Product Details Page",
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "b2292095e0693e384797226e3c80454d5b11e5df",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexProductList.ts": {
-      "inputSchema": {
-        "title": "Vtex Product List",
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "string",
-            "title": "Query",
-            "description": "query to use on search",
-          },
-          "count": {
-            "type": "number",
-            "title": "Count",
-            "description": "total number of items to display",
-          },
-          "sort": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "",
-              },
-              {
-                "type": "string",
-                "const": "price:desc",
-              },
-              {
-                "type": "string",
-                "const": "price:asc",
-              },
-              {
-                "type": "string",
-                "const": "orders:desc",
-              },
-              {
-                "type": "string",
-                "const": "name:desc",
-              },
-              {
-                "type": "string",
-                "const": "name:asc",
-              },
-              {
-                "type": "string",
-                "const": "release:desc",
-              },
-              {
-                "type": "string",
-                "const": "discount:desc",
-              },
-            ],
-            "title": "Sort",
-            "description": "search sort parameter",
-          },
-        },
-        "required": [
-          "query",
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "./functions/vtexProductListingPage.ts": {
-      "inputSchema": {
-        "title": "Vtex Product Listing Page",
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Query",
-            "description": "overides the query term",
-          },
-          "count": {
-            "type": "number",
-            "title": "Items per page",
-            "description": "number of products per page to display",
-          },
-        },
-        "required": [
-          "count",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "$live/sections/Head.tsx": {
-      "inputSchema": {
-        "title": " Head",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Title",
-          },
-          "description": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Description",
-          },
-          "url": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Url",
-          },
-          "imageUrl": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Image Url",
-          },
-          "faviconUrl": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Favicon Url",
-          },
-          "styleUrls": {
-            "type": "array",
-            "items": {
-              "type": "string",
+        "./sections/Instagram.tsx": {
+            "inputSchema": {
+                "title": " Instagram",
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "type": "string",
+                        "title": "User",
+                        "description": "instagram username e.g @instagram",
+                    },
+                    "leftImage": {
+                        "title": "Left Image",
+                        "type": "object",
+                        "properties": {
+                            "desktop": {
+                                "format": "image-uri",
+                                "type": "string",
+                                "title": "Desktop",
+                                "description": "desktop otimized image",
+                            },
+                        },
+                        "required": [
+                            "desktop",
+                        ],
+                    },
+                    "rightImage": {
+                        "title": "Right Image",
+                        "type": "object",
+                        "properties": {
+                            "desktop": {
+                                "format": "image-uri",
+                                "type": "string",
+                                "title": "Desktop",
+                                "description": "desktop otimized image",
+                            },
+                        },
+                        "required": [
+                            "desktop",
+                        ],
+                    },
+                },
+                "required": [
+                    "user",
+                    "leftImage",
+                    "rightImage",
+                ],
             },
-            "title": "Style Urls",
-          },
-          "inlineStyles": {
-            "type": "array",
-            "items": {
-              "type": "string",
+            "outputSchema": null,
+        },
+        "./sections/Newsletter.tsx": {
+            "inputSchema": null,
+            "outputSchema": null,
+        },
+        "./sections/ProductDetails.tsx": {
+            "inputSchema": {
+                "title": " Product Details",
+                "type": "object",
+                "properties": {
+                    "page": {
+                        "$id": "b12d03be41404e17de74a481aa381afa18978cb1",
+                        "format": "live-function",
+                        "type": "string",
+                        "title": "Page",
+                    },
+                },
+                "required": [
+                    "page",
+                ],
             },
-            "title": "Inline Styles",
-          },
-          "scriptUrls": {
-            "type": "array",
-            "items": {
-              "type": "string",
+            "outputSchema": null,
+        },
+        "./sections/ProductGallery.tsx": {
+            "inputSchema": {
+                "title": " Product Gallery",
+                "type": "object",
+                "properties": {
+                    "page": {
+                        "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+                        "format": "live-function",
+                        "type": "string",
+                        "title": "Page",
+                    },
+                },
+                "required": [
+                    "page",
+                ],
             },
-            "title": "Script Urls",
-          },
-          "inlineScripts": {
-            "type": "array",
-            "items": {
-              "type": "string",
+            "outputSchema": null,
+        },
+        "./sections/ProductShelf.tsx": {
+            "inputSchema": {
+                "title": " Product Shelf",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                    },
+                    "products": {
+                        "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
+                        "format": "live-function",
+                        "type": "string",
+                        "title": "Products",
+                    },
+                },
+                "required": [
+                    "title",
+                    "products",
+                ],
             },
-            "title": "Inline Scripts",
-          },
-          "themeColor": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Theme Color",
-          },
+            "outputSchema": null,
         },
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "$live/functions/EffectSelectPage.ts": {
-      "inputSchema": {
-        "title": " Effect Select Page",
-        "type": "object",
-        "properties": {
-          "pageIds": {
-            "type": "array",
-            "items": {
-              "type": "number",
+        "./sections/SearchControls.tsx": {
+            "inputSchema": {
+                "title": " Search Controls",
+                "type": "object",
+                "properties": {
+                    "page": {
+                        "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+                        "format": "live-function",
+                        "type": "string",
+                        "title": "Page",
+                    },
+                },
+                "required": [
+                    "page",
+                ],
             },
-            "title": "Page Ids",
-          },
+            "outputSchema": null,
         },
-        "required": [
-          "pageIds",
-        ],
-      },
-      "outputSchema": null,
+        "./sections/Spacer.tsx": {
+            "inputSchema": {
+                "title": " Spacer",
+                "type": "object",
+                "properties": {
+                    "height": {
+                        "title": "Height",
+                        "type": "object",
+                        "properties": {
+                            "mobile": {
+                                "type": "number",
+                                "title": "Mobile",
+                            },
+                            "desktop": {
+                                "type": "number",
+                                "title": "Desktop",
+                            },
+                        },
+                        "required": [
+                            "mobile",
+                            "desktop",
+                        ],
+                    },
+                },
+                "required": [],
+            },
+            "outputSchema": null,
+        },
+        "./sections/vtexconfig.global.tsx": {
+            "inputSchema": {
+                "title": "Vtexconfig.global",
+                "type": "object",
+                "properties": {
+                    "account": {
+                        "type": "string",
+                        "title": "Account",
+                        "description":
+                            "VTEX Account name. For more info, read here: https://help.vtex.com/en/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC.",
+                    },
+                    "salesChannel": {
+                        "type": "string",
+                        "title": "Sales Channel",
+                        "description":
+                            "VTEX sales channel. This will be the default sales channel your site. For more info, read here: https://help.vtex.com/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV",
+                    },
+                    "locale": {
+                        "type": "string",
+                        "title": "Locale",
+                        "description": "Locale used for VTEX Intelligent Search client.",
+                    },
+                },
+                "required": [
+                    "account",
+                    "salesChannel",
+                    "locale",
+                ],
+            },
+            "outputSchema": null,
+        },
+        "./functions/occProductDetailsPage.ts": {
+            "inputSchema": {
+                "type": "null",
+                "title": "Occ Product Details Page",
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/shopifyProductDetailsPage.ts": {
+            "inputSchema": {
+                "type": "null",
+                "title": "Shopify Product Details Page",
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/shopifyProductList.ts": {
+            "inputSchema": {
+                "title": "Shopify Product List",
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "title": "Query",
+                        "description": "search term to use on search",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Count",
+                        "description": "total number of items to display",
+                    },
+                },
+                "required": [
+                    "query",
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/shopifyProductListingPage.ts": {
+            "inputSchema": {
+                "title": "Shopify Product Listing Page",
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Query",
+                        "description": "overides the query term",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Items per page",
+                        "description": "number of products per page to display",
+                    },
+                },
+                "required": [
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexLegacyProductDetailsPage.ts": {
+            "inputSchema": {
+                "type": "null",
+                "title": "Vtex Legacy Product Details Page",
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexLegacyProductList.ts": {
+            "inputSchema": {
+                "title": "Vtex Legacy Product List",
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "title": "Query",
+                        "description": "query to use on search",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Count",
+                        "description": "total number of items to display",
+                    },
+                    "sort": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "",
+                            },
+                            {
+                                "type": "string",
+                                "const": "price:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "price:asc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "orders:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "name:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "name:asc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "release:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "discount:desc",
+                            },
+                        ],
+                        "title": "Sort",
+                        "description": "search sort parameter",
+                    },
+                },
+                "required": [
+                    "query",
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexLegacyProductListingPage.ts": {
+            "inputSchema": {
+                "title": "Vtex Legacy Product Listing Page",
+                "type": "object",
+                "properties": {
+                    "term": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Term",
+                        "description": "overides the query term",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Items per page",
+                        "description": "number of products per page to display",
+                    },
+                    "ft": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Ft",
+                        "description": "FullText term",
+                    },
+                    "fq": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Fq",
+                    },
+                    "map": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Map",
+                        "description": "map param",
+                    },
+                },
+                "required": [
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexProductDetailsPage.ts": {
+            "inputSchema": {
+                "type": "null",
+                "title": "Vtex Product Details Page",
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexProductList.ts": {
+            "inputSchema": {
+                "title": "Vtex Product List",
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "title": "Query",
+                        "description": "query to use on search",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Count",
+                        "description": "total number of items to display",
+                    },
+                    "sort": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "",
+                            },
+                            {
+                                "type": "string",
+                                "const": "price:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "price:asc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "orders:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "name:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "name:asc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "release:desc",
+                            },
+                            {
+                                "type": "string",
+                                "const": "discount:desc",
+                            },
+                        ],
+                        "title": "Sort",
+                        "description": "search sort parameter",
+                    },
+                },
+                "required": [
+                    "query",
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "18e9298f44fabfefab948fb98a413b90224be6a0",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "./functions/vtexProductListingPage.ts": {
+            "inputSchema": {
+                "title": "Vtex Product Listing Page",
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Query",
+                        "description": "overides the query term",
+                    },
+                    "count": {
+                        "type": "number",
+                        "title": "Items per page",
+                        "description": "number of products per page to display",
+                    },
+                },
+                "required": [
+                    "count",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "32f8a6c92e01d08eaba8ff4e3e4f0985c1b774f9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "$live/sections/Head.tsx": {
+            "inputSchema": {
+                "title": " Head",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Title",
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Description",
+                    },
+                    "url": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Url",
+                    },
+                    "imageUrl": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Image Url",
+                    },
+                    "faviconUrl": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Favicon Url",
+                    },
+                    "styleUrls": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Style Urls",
+                    },
+                    "inlineStyles": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Inline Styles",
+                    },
+                    "scriptUrls": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Script Urls",
+                    },
+                    "inlineScripts": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "title": "Inline Scripts",
+                    },
+                    "themeColor": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Theme Color",
+                    },
+                },
+                "required": [],
+            },
+            "outputSchema": null,
+        },
+        "$live/functions/EffectSelectPage.ts": {
+            "inputSchema": {
+                "title": " Effect Select Page",
+                "type": "object",
+                "properties": {
+                    "pageIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "number",
+                        },
+                        "title": "Page Ids",
+                    },
+                },
+                "required": [
+                    "pageIds",
+                ],
+            },
+            "outputSchema": null,
+        },
+        "$live/functions/MatchDate.ts": {
+            "inputSchema": {
+                "title": " Match Date",
+                "type": "object",
+                "properties": {
+                    "start": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Start",
+                        "format": "date-time",
+                    },
+                    "end": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "End",
+                        "format": "date-time",
+                    },
+                    "session": {
+                        "type": "boolean",
+                        "title": "Session",
+                    },
+                },
+                "required": [
+                    "session",
+                ],
+            },
+            "outputSchema": null,
+        },
+        "$live/functions/MatchEnvironment.ts": {
+            "inputSchema": {
+                "title": " Match Environment",
+                "type": "object",
+                "properties": {
+                    "environment": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "const": "production",
+                            },
+                            {
+                                "type": "string",
+                                "const": "development",
+                            },
+                        ],
+                        "title": "Environment",
+                    },
+                },
+                "required": [
+                    "environment",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "$live/functions/MatchRandom.ts": {
+            "inputSchema": {
+                "title": " Match Random",
+                "type": "object",
+                "properties": {
+                    "traffic": {
+                        "type": "number",
+                        "title": "Traffic",
+                    },
+                    "session": {
+                        "type": "boolean",
+                        "title": "Session",
+                    },
+                },
+                "required": [
+                    "traffic",
+                    "session",
+                ],
+            },
+            "outputSchema": null,
+        },
+        "$live/functions/MatchSite.ts": {
+            "inputSchema": {
+                "title": " Match Site",
+                "type": "object",
+                "properties": {
+                    "siteId": {
+                        "type": "number",
+                        "title": "Site Id",
+                    },
+                },
+                "required": [
+                    "siteId",
+                ],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
+        "$live/functions/MatchUserAgent.ts": {
+            "inputSchema": {
+                "title": " Match User Agent",
+                "type": "object",
+                "properties": {
+                    "includes": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Includes",
+                    },
+                    "match": {
+                        "type": [
+                            "string",
+                            "null",
+                        ],
+                        "title": "Match",
+                    },
+                },
+                "required": [],
+            },
+            "outputSchema": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
+                    },
+                },
+                "additionalProperties": true,
+            },
+        },
     },
-    "$live/functions/MatchDate.ts": {
-      "inputSchema": {
-        "title": " Match Date",
-        "type": "object",
-        "properties": {
-          "start": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Start",
-            "format": "date-time",
-          },
-          "end": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "End",
-            "format": "date-time",
-          },
-          "session": {
-            "type": "boolean",
-            "title": "Session",
-          },
-        },
-        "required": [
-          "session",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "$live/functions/MatchEnvironment.ts": {
-      "inputSchema": {
-        "title": " Match Environment",
-        "type": "object",
-        "properties": {
-          "environment": {
-            "type": "string",
-            "anyOf": [
-              {
-                "type": "string",
-                "const": "production",
-              },
-              {
-                "type": "string",
-                "const": "development",
-              },
-            ],
-            "title": "Environment",
-          },
-        },
-        "required": [
-          "environment",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "$live/functions/MatchRandom.ts": {
-      "inputSchema": {
-        "title": " Match Random",
-        "type": "object",
-        "properties": {
-          "traffic": {
-            "type": "number",
-            "title": "Traffic",
-          },
-          "session": {
-            "type": "boolean",
-            "title": "Session",
-          },
-        },
-        "required": [
-          "traffic",
-          "session",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "$live/functions/MatchSite.ts": {
-      "inputSchema": {
-        "title": " Match Site",
-        "type": "object",
-        "properties": {
-          "siteId": {
-            "type": "number",
-            "title": "Site Id",
-          },
-        },
-        "required": [
-          "siteId",
-        ],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-    "$live/functions/MatchUserAgent.ts": {
-      "inputSchema": {
-        "title": " Match User Agent",
-        "type": "object",
-        "properties": {
-          "includes": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Includes",
-          },
-          "match": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Match",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "$id": "c995d72dc372b1b50bf9f70943e37fc94e1ccac9",
-          },
-        },
-        "additionalProperties": true,
-      },
-    },
-  },
-  baseUrl: import.meta.url,
-  config,
+    baseUrl: import.meta.url,
+    config,
 };
 
 // live — this exposes the manifest so the live server can render components dynamically

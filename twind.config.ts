@@ -7,111 +7,118 @@
 import type { Options } from "$fresh/plugins/twind.ts";
 
 const options: Omit<Options, "selfURL"> = {
-  plugins: {
-    backdrop: {
-      "&::backdrop": {
-        background: "rgba(0, 0, 0, 0.5)",
-      },
-    },
-    "scroll-snap-center": {
-      "scroll-snap-align": "center",
-    },
-    "scroll-x-mandatory": {
-      "scroll-snap-type": "x mandatory",
-    },
-    "scroll-smooth": {
-      "scroll-behavior": "smooth",
-      "-webkit-overflow-scrolling": "touch",
-    },
-    "scrollbar-none": {
-      "scrollbar-width": "none",
-      "-ms-overflow-style": "none",
-      "&::-webkit-scrollbar": {
-        display: "none",
-      },
-    },
-    "clip-path-10": {
-      "clip-path":
-        "polygon(10px 0, 100% 0px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
-    },
-    "clip-path-5": {
-      "clip-path":
-        "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
-    },
-    "clip-path-polygon": {
-      "clip-path": "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
-    },
-    "after-border": {
-      "&:after": {
-        "content": "",
-        "background": "#fd0",
-        "width": "80%",
-        "height": "2px",
-        "bottom": "1px",
-        "position": "absolute",
-        "left": "6px",
-      },
-    },
-  },
-  theme: {
-    extend: {
-      colors: {
-        primary: "#2FD180",
-        "primary-green-light": "#2EAE80",
-        "primary-green-dark": "#177151",
-        "primary-dark": "#221E1F",
-        "primary-light": "#f4f4f4",
-        "custom-brown": "#f8f5f1",
-        "custom-gray": "#f4f4f4",
-        "primary-red": "#D10923",
-        "primary-red-light": "#DA262B",
-        "primary-red-dark": "#A1061A",
-      },
-      animation: {
-        "slide-left": "slide-left-frame 0.4s ease normal",
-        "slide-right": "slide-right-frame 0.4s ease normal",
-        "slide-bottom": "slide-bottom-frame 0.4s ease normal",
-      },
-      keyframes: {
-        "slide-left-frame": {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(0)" },
+    plugins: {
+        backdrop: {
+            "&::backdrop": {
+                background: "rgba(0, 0, 0, 0.5)",
+            },
         },
-        "slide-right-frame": {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(0)" },
+        "scroll-snap-center": {
+            "scroll-snap-align": "center",
         },
-        "slide-bottom-frame": {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
+        "scroll-x-mandatory": {
+            "scroll-snap-type": "x mandatory",
         },
-      },
+        "scroll-smooth": {
+            "scroll-behavior": "smooth",
+            "-webkit-overflow-scrolling": "touch",
+        },
+        "scrollbar-none": {
+            "scrollbar-width": "none",
+            "-ms-overflow-style": "none",
+            "&::-webkit-scrollbar": {
+                display: "none",
+            },
+        },
+        "clip-path-right-50": {
+            "clip-path":
+                "polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0 100%);",
+        },
+        "clip-path-10": {
+            "clip-path":
+                "polygon(10px 0, 100% 0px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
+        },
+        "clip-path-5": {
+            "clip-path":
+                "polygon(5px 0, 100% 0px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)",
+        },
+        "clip-path-polygon": {
+            "clip-path": "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
+        },
+        "after-border": {
+            "&:after": {
+                "content": "",
+                "background": "#fd0",
+                "width": "80%",
+                "height": "2px",
+                "bottom": "1px",
+                "position": "absolute",
+                "left": "6px",
+            },
+        },
     },
-    fontFamily: {
-      sans: ["Titillium Web", "sans-serif"],
-      gang: ["gang_of_three"],
-      serif: ["inherit", "serif"],
+    theme: {
+        extend: {
+            colors: {
+                primary: "#2FD180",
+                "primary-green-light": "#2EAE80",
+                "primary-green-dark": "#177151",
+                "primary-dark": "#221E1F",
+                "primary-light": "#f4f4f4",
+                "custom-brown": "#f8f5f1",
+                "custom-gray": "#f4f4f4",
+                "primary-red": "#D10923",
+                "primary-red-light": "#DA262B",
+                "primary-red-dark": "#A1061A",
+            },
+            textColor: {
+                "primary-yellow": "#fd0",
+            },
+            animation: {
+                "slide-left": "slide-left-frame 0.4s ease normal",
+                "slide-right": "slide-right-frame 0.4s ease normal",
+                "slide-bottom": "slide-bottom-frame 0.4s ease normal",
+            },
+            keyframes: {
+                "slide-left-frame": {
+                    from: { transform: "translateX(100%)" },
+                    to: { transform: "translateX(0)" },
+                },
+                "slide-right-frame": {
+                    from: { transform: "translateX(-100%)" },
+                    to: { transform: "translateX(0)" },
+                },
+                "slide-bottom-frame": {
+                    from: { transform: "translateY(100%)" },
+                    to: { transform: "translateY(0)" },
+                },
+            },
+        },
+        fontFamily: {
+            sans: ["Titillium Web", "sans-serif"],
+            gang: ["gang_of_three"],
+            serif: ["inherit", "serif"],
+        },
+        screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+        },
     },
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+    preflight: {
+        "@import":
+            `url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap')`,
+        "@font-face": [
+            {
+                fontFamily: "gang_of_three",
+                src:
+                    'url("https://cdn.quatrodigital.com/tamashii/go3v2-webfont.woff2.css") format("woff2"),url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff.css") format("woff")',
+                fontWeight: 400,
+            },
+        ],
     },
-  },
-  preflight: {
-    "@import":
-      `url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap')`,
-    "@font-face": [
-      {
-        fontFamily: "gang_of_three",
-        src:
-          'url("https://cdn.quatrodigital.com/tamashii/go3v2-webfont.woff2.css") format("woff2"),url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff.css") format("woff")',
-        fontWeight: 400,
-      },
-    ],
-  },
 };
 
 export default options;
