@@ -1,15 +1,24 @@
 import { toProductPage } from "$live/std/commerce/vtex/transform.ts";
 import type { LoaderFunction } from "$live/std/types.ts";
-import type { ProductDetailsPage } from "$live/std/commerce/types.ts";
+// import type { ProductDetailsPage } from "$live/std/commerce/types.ts";
 
 import { defaultVTEXSettings, vtex } from "../clients/instances.ts";
 import type { VTEXConfig } from "../sections/vtexconfig.global.tsx";
 import type { LiveState } from "$live/types.ts";
-
 /**
  * @title VTEX Product Page Loader
  * @description Works on routes of type /:slug/p
  */
+
+
+export interface Product{
+    productReference?: string
+}
+
+export interface ProductDetailsPage {
+    product: Product
+}
+
 const productPageLoader: LoaderFunction<
   null,
   ProductDetailsPage | null,
@@ -36,10 +45,13 @@ const productPageLoader: LoaderFunction<
       status: 404,
     };
   }
+  const newProduct = toProductPage(product, skuId?.toString()) as ProductDetailsPage;
+  newProduct.product.productReference = product.productReference
 
   return {
-    data: toProductPage(product, skuId?.toString()),
+    data: newProduct
   };
 };
+
 
 export default productPageLoader;

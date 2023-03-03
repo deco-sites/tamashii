@@ -685,7 +685,7 @@ const manifest: DecoManifest = {
         "type": "object",
         "properties": {
           "page": {
-            "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+            "$id": "b2292095e0693e384797226e3c80454d5b11e5df",
             "format": "live-function",
             "type": "string",
             "title": "Page",
@@ -1059,7 +1059,7 @@ const manifest: DecoManifest = {
         "type": "object",
         "properties": {
           "data": {
-            "$id": "77c3750ca550c4476e576a53c2aa0bf943d6dd33",
+            "$id": "b2292095e0693e384797226e3c80454d5b11e5df",
           },
         },
         "additionalProperties": true,
