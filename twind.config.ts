@@ -30,6 +30,10 @@ const options: Omit<Options, "selfURL"> = {
         display: "none",
       },
     },
+    "clip-path-25": {
+      "clip-path":
+        "polygon(20px 0, 100% 0px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)",
+    },
     "clip-path-10": {
       "clip-path":
         "polygon(10px 0, 100% 0px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
@@ -85,6 +89,12 @@ const options: Omit<Options, "selfURL"> = {
           from: { transform: "translateY(100%)" },
           to: { transform: "translateY(0)" },
         },
+      },
+      backgroundImage: {
+        "newsletter-bg":
+          "url('https://lojatamashii.vteximg.com.br/arquivos/newsletter-bg.png')",
+        "eva-01":
+          "url('https://lojatamashii.vteximg.com.br/arquivos/newsletter-img.png')",
       },
     },
     fontFamily: {

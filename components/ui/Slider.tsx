@@ -16,24 +16,74 @@
  * increasing TBT metric and making your website slow.
  */
 import { useEffect, useState } from "preact/hooks";
+import getFromResolution from "../../func/getFromResolution.ts";
+import useScreenResolution from "../hooks/useScreenResolution.tsx"; 
 
 interface Props {
   items: number;
-  delay?: number;
   id: string;
+  autoPlayDelay?: number;
+  itemsToScroll?: { desktop: number; tablet: number; mobile: number };
+  itemsPerPage?: { desktop: number; tablet: number; mobile: number };
 }
-
-function Slider({ id, items, delay = 2_000 }: Props) {
+const defaultItemsPerPage = { desktop: 1, tablet: 1, mobile: 1 };
+const defaultItemsToScroll = { desktop: 1, tablet: 1, mobile: 1 };
+function Slider(
+  {
+    id,
+    items,
+    autoPlayDelay = 0,
+    itemsToScroll = defaultItemsPerPage,
+    itemsPerPage = defaultItemsToScroll,
+  }: Props,
+) {
   const [index, setIndex] = useState(0);
+  const screenResolution = useScreenResolution();
+  const [resItemsToScroll, setResItemsToScroll] = useState(
+    getFromResolution(screenResolution, itemsToScroll),
+  );
+  const [resItemsPerPage, setResItemsPerPage] = useState(
+    getFromResolution(screenResolution, itemsPerPage),
+  );
+  const [fixItemsToScroll, setFixItemsToScroll] = useState(
+    resItemsToScroll > resItemsPerPage || resItemsToScroll == 0
+      ? resItemsPerPage
+      : resItemsToScroll,
+  );
+  const [nOfPages, setNOfPages] = useState(
+    items > 1
+      ? Math.ceil(items / fixItemsToScroll) -
+        (resItemsPerPage - resItemsToScroll)
+      : 1,
+  );
+
+  useEffect(() => {
+    const newItemPerPage = getFromResolution(screenResolution, itemsPerPage);
+    const newItemToScroll = getFromResolution(screenResolution, itemsToScroll);
+    const newFixItemsToScroll =
+      newItemToScroll > newItemPerPage || newItemToScroll == 0
+        ? newItemPerPage
+        : newItemToScroll;
+    setResItemsToScroll(newItemToScroll);
+    setResItemsPerPage(newItemPerPage);
+    setFixItemsToScroll(newFixItemsToScroll);
+    setNOfPages(
+      items > 1
+        ? Math.ceil(items / newFixItemsToScroll) -
+          (newItemPerPage - newItemToScroll)
+        : 1,
+    );
+  }, [screenResolution]);
 
   // Timer
   useEffect(() => {
-    const id = setInterval(() => setIndex((index + 1) % items), delay);
+    const id = autoPlayDelay &&
+      setInterval(() => setIndex((index + 1) % nOfPages), autoPlayDelay);
 
     return () => {
-      clearInterval(id);
+      autoPlayDelay && clearInterval(id);
     };
-  }, [index, delay, items]);
+  }, [index, autoPlayDelay, items]);
 
   // Focus the right content
   useEffect(() => {
@@ -42,16 +92,34 @@ function Slider({ id, items, delay = 2_000 }: Props) {
     ) as HTMLDivElement;
 
     if (content) {
-      content.style.transform = `translateX(-${(100 / items) * index}%)`;
+      //offset so that when the remaining items are less than the items to scroll, the slider just show the remaining items
+      //which means that if the slider has 5 items and we want to scroll 2 items, the last page will only show the last 2 items
+      const offset = index == nOfPages - 1 ? items % resItemsToScroll : 0;
+      //unit is the percentage of the slider that each page moves
+      const unit = 100 / (items / resItemsToScroll);
+      //now we need a new unit that will calculate how much one slider moves, and subtract it from the final result
+      //so that the slider will move the right amount of items
+      const offsetUnit = offset
+        ? (unit / resItemsToScroll) * (resItemsPerPage - offset)
+        : 0;
+      const move = unit * index - offsetUnit;
+      console.log("offsetUnit", offsetUnit);
+      console.log("unit", unit);
+      console.log("move", move);
+      console.log("offset", offset);
+
+      content.style.transform = `translateX(-${move}%)`;
     }
 
     const dots = document.getElementById(id)?.querySelectorAll("[data-dot]");
 
     if (dots) {
-      dots.forEach((dot, it) =>
-        it === index
-          ? dot.setAttribute("disabled", "")
-          : dot.removeAttribute("disabled")
+      dots.forEach((
+        dot,
+        it,
+      ) => (it === index
+        ? dot.setAttribute("disabled", "")
+        : dot.removeAttribute("disabled"))
       );
     }
   }, [index]);
@@ -65,8 +133,8 @@ function Slider({ id, items, delay = 2_000 }: Props) {
       "[data-slider-next]",
     );
 
-    const next = () => setIndex((i) => (i + 1) % items);
-    const prev = () => setIndex((i) => i > 0 ? i - 1 : items - 1);
+    const next = () => setIndex((i) => (i + 1) % (nOfPages || 1));
+    const prev = () => setIndex((i) => (i > 0 ? i - 1 : (nOfPages || 1) - 1));
 
     nextElement?.addEventListener("click", next);
     prevElement?.addEventListener("click", prev);
@@ -75,7 +143,7 @@ function Slider({ id, items, delay = 2_000 }: Props) {
       nextElement?.removeEventListener("click", next);
       prevElement?.removeEventListener("click", prev);
     };
-  }, [items]);
+  }, [nOfPages]);
 
   // Handles button control elements (dots)
   useEffect(() => {
