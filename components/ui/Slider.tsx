@@ -17,7 +17,7 @@
  */
 import { useEffect, useState } from "preact/hooks";
 import getFromResolution from "../../func/getFromResolution.ts";
-import useScreenResolution from "../hooks/useScreenResolution.tsx"; 
+import useScreenResolution from "../hooks/useScreenResolution.tsx";
 
 interface Props {
   items: number;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import { Picture, Source } from "$live/std/ui/components/Picture.tsx";
 import { Image } from "../components/ui/Carousel.tsx";
 import getFromResolution from "../func/getFromResolution.ts";
-import useScreenResolution from "../components/hooks/useScreenResolution.tsx"; 
+import useScreenResolution from "../components/hooks/useScreenResolution.tsx";
 import { ImageBrand } from "../components/ui/BrandCarousel.tsx";
 
 type Img = ImageBrand | Image;

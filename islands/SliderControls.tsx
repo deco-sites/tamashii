@@ -1,7 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import Icon from "../components/ui/Icon.tsx";
 import getFromResolution from "../func/getFromResolution.ts";
-import useScreenResolution from "../components/hooks/useScreenResolution.tsx"; 
+import useScreenResolution from "../components/hooks/useScreenResolution.tsx";
 export interface Props {
   dots: boolean;
   items: number;
