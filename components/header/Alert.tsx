@@ -70,7 +70,7 @@ function Alert({ alerts = messages }: Props) {
           </div>
         </div>
       </section>
-      <Slider id={id} items={alerts.length} delay={4000} />
+      <Slider id={id} items={alerts.length} autoPlayDelay={4000} />
     </>
   );
 }

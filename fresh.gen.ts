@@ -20,24 +20,27 @@ import * as $$5 from "./islands/Menu.tsx";
 import * as $$6 from "./islands/SearchControls.tsx";
 import * as $$7 from "./islands/ShelfTabs.tsx";
 import * as $$8 from "./islands/Slider.tsx";
+import * as $$9 from "./islands/SliderControls.tsx";
+import * as $$10 from "./islands/SliderImages.tsx";
 import * as $$$0 from "./sections/Banner.tsx";
-import * as $$$1 from "./sections/BrandSection.tsx";
-import * as $$$2 from "./sections/Button.story.tsx";
-import * as $$$3 from "./sections/Carousel.tsx";
-import * as $$$4 from "./sections/Features.tsx";
-import * as $$$5 from "./sections/Footer.tsx";
-import * as $$$6 from "./sections/Head.tsx";
-import * as $$$7 from "./sections/Header.tsx";
-import * as $$$8 from "./sections/Highlights.tsx";
-import * as $$$9 from "./sections/Instagram.tsx";
-import * as $$$10 from "./sections/Newsletter.tsx";
-import * as $$$11 from "./sections/ProductDetails.tsx";
-import * as $$$12 from "./sections/ProductGallery.tsx";
-import * as $$$13 from "./sections/ProductShelf.tsx";
-import * as $$$14 from "./sections/SearchControls.tsx";
-import * as $$$15 from "./sections/Spacer.tsx";
-import * as $$$16 from "./sections/vtexconfig.global.tsx";
-import * as $$$17 from "$live/sections/Head.tsx";
+import * as $$$1 from "./sections/BrandCarousel.tsx";
+import * as $$$2 from "./sections/BrandSection.tsx";
+import * as $$$3 from "./sections/Button.story.tsx";
+import * as $$$4 from "./sections/Carousel.tsx";
+import * as $$$5 from "./sections/Features.tsx";
+import * as $$$6 from "./sections/Footer.tsx";
+import * as $$$7 from "./sections/Head.tsx";
+import * as $$$8 from "./sections/Header.tsx";
+import * as $$$9 from "./sections/Highlights.tsx";
+import * as $$$10 from "./sections/Instagram.tsx";
+import * as $$$11 from "./sections/Newsletter.tsx";
+import * as $$$12 from "./sections/ProductDetails.tsx";
+import * as $$$13 from "./sections/ProductGallery.tsx";
+import * as $$$14 from "./sections/ProductShelf.tsx";
+import * as $$$15 from "./sections/SearchControls.tsx";
+import * as $$$16 from "./sections/Spacer.tsx";
+import * as $$$17 from "./sections/vtexconfig.global.tsx";
+import * as $$$18 from "$live/sections/Head.tsx";
 import * as $$$$0 from "./functions/occProductDetailsPage.ts";
 import * as $$$$1 from "./functions/shopifyProductDetailsPage.ts";
 import * as $$$$2 from "./functions/shopifyProductList.ts";
@@ -75,26 +78,29 @@ const manifest: DecoManifest = {
     "./islands/SearchControls.tsx": $$6,
     "./islands/ShelfTabs.tsx": $$7,
     "./islands/Slider.tsx": $$8,
+    "./islands/SliderControls.tsx": $$9,
+    "./islands/SliderImages.tsx": $$10,
   },
   sections: {
     "./sections/Banner.tsx": $$$0,
-    "./sections/BrandSection.tsx": $$$1,
-    "./sections/Button.story.tsx": $$$2,
-    "./sections/Carousel.tsx": $$$3,
-    "./sections/Features.tsx": $$$4,
-    "./sections/Footer.tsx": $$$5,
-    "./sections/Head.tsx": $$$6,
-    "./sections/Header.tsx": $$$7,
-    "./sections/Highlights.tsx": $$$8,
-    "./sections/Instagram.tsx": $$$9,
-    "./sections/Newsletter.tsx": $$$10,
-    "./sections/ProductDetails.tsx": $$$11,
-    "./sections/ProductGallery.tsx": $$$12,
-    "./sections/ProductShelf.tsx": $$$13,
-    "./sections/SearchControls.tsx": $$$14,
-    "./sections/Spacer.tsx": $$$15,
-    "./sections/vtexconfig.global.tsx": $$$16,
-    "$live/sections/Head.tsx": $$$17,
+    "./sections/BrandCarousel.tsx": $$$1,
+    "./sections/BrandSection.tsx": $$$2,
+    "./sections/Button.story.tsx": $$$3,
+    "./sections/Carousel.tsx": $$$4,
+    "./sections/Features.tsx": $$$5,
+    "./sections/Footer.tsx": $$$6,
+    "./sections/Head.tsx": $$$7,
+    "./sections/Header.tsx": $$$8,
+    "./sections/Highlights.tsx": $$$9,
+    "./sections/Instagram.tsx": $$$10,
+    "./sections/Newsletter.tsx": $$$11,
+    "./sections/ProductDetails.tsx": $$$12,
+    "./sections/ProductGallery.tsx": $$$13,
+    "./sections/ProductShelf.tsx": $$$14,
+    "./sections/SearchControls.tsx": $$$15,
+    "./sections/Spacer.tsx": $$$16,
+    "./sections/vtexconfig.global.tsx": $$$17,
+    "$live/sections/Head.tsx": $$$18,
   },
   functions: {
     "./functions/occProductDetailsPage.ts": $$$$0,
@@ -178,6 +184,123 @@ const manifest: DecoManifest = {
           },
         },
         "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/BrandCarousel.tsx": {
+      "inputSchema": {
+        "title": " Brand Carousel",
+        "type": "object",
+        "properties": {
+          "images": {
+            "type": "array",
+            "items": {
+              "title": "ImageBrand",
+              "type": "object",
+              "properties": {
+                "desktop": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Desktop",
+                  "description": "brand otimized image",
+                },
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                  "description":
+                    "when user clicks on the image, go to this link",
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Alt",
+                  "description": "Image's alt text",
+                },
+              },
+              "required": [
+                "desktop",
+                "href",
+                "alt",
+              ],
+            },
+            "title": "Images",
+          },
+          "preload": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Preload",
+            "description":
+              "Check this option when this banner is the biggest image on the screen for image optimizations",
+          },
+          "dots": {
+            "type": "boolean",
+            "title": "Dots",
+          },
+          "itemsPerPage": {
+            "title": "Items Per Page",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "type": "number",
+                "title": "Desktop",
+                "default": "1",
+              },
+              "tablet": {
+                "type": "number",
+                "title": "Tablet",
+                "description": "tablet items",
+              },
+              "mobile": {
+                "type": "number",
+                "title": "Mobile",
+                "description": "mobile items",
+              },
+            },
+            "required": [
+              "desktop",
+              "tablet",
+              "mobile",
+            ],
+          },
+          "itemsToScroll": {
+            "title": "Items To Scroll",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "type": "number",
+                "title": "Desktop",
+                "default": "1",
+              },
+              "tablet": {
+                "type": "number",
+                "title": "Tablet",
+                "description": "tablet items",
+              },
+              "mobile": {
+                "type": "number",
+                "title": "Mobile",
+                "description": "mobile items",
+              },
+            },
+            "required": [
+              "desktop",
+              "tablet",
+              "mobile",
+            ],
+          },
+          "autoPlayDelay": {
+            "type": [
+              "number",
+              "null",
+            ],
+            "title": "Auto Play Delay",
+            "default": "0",
+          },
+        },
+        "required": [
+          "dots",
+        ],
       },
       "outputSchema": null,
     },
@@ -364,13 +487,67 @@ const manifest: DecoManifest = {
             "title": "Dots",
           },
           "itemsPerPage": {
-            "type": "number",
             "title": "Items Per Page",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "type": "number",
+                "title": "Desktop",
+                "default": "1",
+              },
+              "tablet": {
+                "type": "number",
+                "title": "Tablet",
+                "description": "tablet items",
+              },
+              "mobile": {
+                "type": "number",
+                "title": "Mobile",
+                "description": "mobile items",
+              },
+            },
+            "required": [
+              "desktop",
+              "tablet",
+              "mobile",
+            ],
+          },
+          "itemsToScroll": {
+            "title": "Items To Scroll",
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "type": "number",
+                "title": "Desktop",
+                "default": "1",
+              },
+              "tablet": {
+                "type": "number",
+                "title": "Tablet",
+                "description": "tablet items",
+              },
+              "mobile": {
+                "type": "number",
+                "title": "Mobile",
+                "description": "mobile items",
+              },
+            },
+            "required": [
+              "desktop",
+              "tablet",
+              "mobile",
+            ],
+          },
+          "autoPlayDelay": {
+            "type": [
+              "number",
+              "null",
+            ],
+            "title": "Auto Play Delay",
           },
         },
         "required": [
           "dots",
-          "itemsPerPage",
         ],
       },
       "outputSchema": null,

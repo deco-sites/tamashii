@@ -4,11 +4,9 @@ import Slider from "$store/islands/Slider.tsx";
 import SliderControls from "../../islands/SliderControls.tsx";
 import SliderImages from "../../islands/SliderImages.tsx";
 
-export interface Image {
-  /** @description desktop otimized image */
+export interface ImageBrand {
+  /** @description brand otimized image */
   desktop: LiveImage;
-  /** @description mobile otimized image */
-  mobile: LiveImage;
   /** @description when user clicks on the image, go to this link */
   href: string;
   /** @description Image's alt text */
@@ -40,7 +38,7 @@ export interface ItemsToScroll {
 }
 
 export interface Props {
-  images?: Image[];
+  images?: ImageBrand[];
   /**
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
@@ -48,13 +46,16 @@ export interface Props {
   dots: boolean;
   itemsPerPage?: ItemsPerPage;
   itemsToScroll?: ItemsToScroll;
+  /**
+   * @default 0
+   */
   autoPlayDelay?: number;
 }
 
-const defaultItemsPerPage = { desktop: 3, tablet: 1, mobile: 1 };
-const defaultItemsToScroll = { desktop: 1, tablet: 1, mobile: 1 };
+const defaultItemsPerPage = { desktop: 6, tablet: 1, mobile: 1 };
+const defaultItemsToScroll = { desktop: 6, tablet: 1, mobile: 1 };
 
-function Carousel(
+function BrandCarousel(
   {
     images = [],
     preload = false,
@@ -67,11 +68,16 @@ function Carousel(
   const id = useId();
 
   return (
-    <div id={id} class="relative w-full overflow-hidden">
+    <div
+      id={id + "brand"}
+      class="relative w-full overflow-hidden h-32 flex items-center"
+    >
       <SliderImages
         images={images}
         preload={preload}
         itemsPerPage={itemsPerPage || defaultItemsPerPage}
+        width={222}
+        height={115}
       />
 
       <SliderControls
@@ -83,7 +89,7 @@ function Carousel(
       {/* Effects for transitioning between images */}
       <Slider
         items={images.length}
-        id={id}
+        id={id + "brand"}
         autoPlayDelay={autoPlayDelay}
         itemsPerPage={itemsPerPage || defaultItemsPerPage}
         itemsToScroll={itemsToScroll || defaultItemsToScroll}
@@ -92,4 +98,4 @@ function Carousel(
   );
 }
 
-export default Carousel;
+export default BrandCarousel;
