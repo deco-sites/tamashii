@@ -1,5 +1,5 @@
-import type { Image as LiveImage } from "$live/std/ui/types/Image.ts";
-import Image from "$live/std/ui/components/Image.tsx";
+import { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import Image from "deco-sites/std/components/Image.tsx";
 
 export interface Highlight {
   src: LiveImage;

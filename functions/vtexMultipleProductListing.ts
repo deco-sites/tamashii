@@ -1,11 +1,11 @@
-import { toProduct } from "$live/std/commerce/vtex/transform.ts";
+import { toProduct } from "deco-sites/std/commerce/vtex/transform.ts";
 
-import type { LoaderFunction } from "$live/std/types.ts";
+import type { LoaderFunction } from "$live/types.ts";
 import type { LiveState } from "$live/types.ts";
 
 import { defaultVTEXSettings, vtex } from "../clients/instances.ts";
 import type { VTEXConfig } from "../sections/vtexconfig.global.tsx";
-import type { Sort } from "$live/std/commerce/vtex/types.ts";
+import type { Sort } from "deco-sites/std/commerce/vtex/types.ts";
 import { MultipleProducts } from "../components/product/ProductShelf.tsx";
 
 export interface Props {
@@ -45,6 +45,7 @@ const multipleProductListLoader: LoaderFunction<
   const count = props.count ?? 12;
   const queries = props.queries || [];
   const sort: Sort = props.sort || "";
+  const url = new URL(_req.url);
 
   // search products on VTEX. Feel free to change any of these parameters
   const queriesPromise = queries.map((query) =>
@@ -64,7 +65,7 @@ const multipleProductListLoader: LoaderFunction<
   // it in here
   const groupedProducts = productsGroup.map((group) => ({
     ...group,
-    products: group.products.map((p) => toProduct(p, p.items[0], 0)),
+    products: group.products.map((p) => toProduct(p, p.items[0], 0,{ url, priceCurrency: vtex.currency() })),
   }));
 
   return {

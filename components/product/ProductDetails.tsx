@@ -1,7 +1,7 @@
-import { ProductDetailsPage } from "$live/std/commerce/types.ts";
-import { LoaderReturnType } from "$live/std/types.ts";
+import { ProductDetailsPage } from "deco-sites/std/commerce/types.ts";
+import { LoaderReturnType } from "$live/types.ts";
 import { Head } from "$fresh/runtime.ts";
-import Image from "$live/std/ui/components/Image.tsx";
+import Image from "deco-sites/std/components/Image.tsx";
 import SKUSelector from "$store/components/product/SKUSelector.tsx";
 import { useOffer } from "$store/sdk/useOffer.ts";
 import AddToCartButton from "$store/islands/AddToCartButton.tsx";

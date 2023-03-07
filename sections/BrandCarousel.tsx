@@ -5,4 +5,4 @@ export type {
   ItemsToScroll,
   Props,
 } from "$store/components/ui/BrandCarousel.tsx";
-export type { Image as LiveImage } from "$live/std/ui/types/Image.ts";
+export type { Image as LiveImage } from "deco-sites/std/components/types.ts";

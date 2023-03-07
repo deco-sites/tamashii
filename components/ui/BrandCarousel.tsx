@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from "preact/hooks";
-import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
+import { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Slider from "$store/islands/Slider.tsx";
 import SliderControls from "../../islands/SliderControls.tsx";
 import SliderImages from "../../islands/SliderImages.tsx";

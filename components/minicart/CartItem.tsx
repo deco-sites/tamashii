@@ -1,4 +1,4 @@
-import Image from "$live/std/ui/components/Image.tsx";
+import Image from "deco-sites/std/components/Image.tsx";
 
 import QuantitySelector from "../ui/QuantitySelector.tsx";
 import { useCart } from "../../sdk/cart/useCart.ts";

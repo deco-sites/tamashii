@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import { Picture, Source } from "$live/std/ui/components/Picture.tsx";
+import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import { Image } from "../components/ui/Carousel.tsx";
 import getFromResolution from "../func/getFromResolution.ts";
 import useScreenResolution from "../components/hooks/useScreenResolution.tsx";

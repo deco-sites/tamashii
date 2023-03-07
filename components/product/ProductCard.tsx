@@ -1,5 +1,5 @@
-import { Product } from "$live/std/commerce/types.ts";
-import Image from "$live/std/ui/components/Image.tsx";
+import { Product } from "deco-sites/std/commerce/types.ts";
+import Image from "deco-sites/std/components/Image.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import Button from "../ui/Button.tsx";
 

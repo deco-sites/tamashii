@@ -1,5 +1,5 @@
 import { useMemo } from "preact/hooks";
-import { ProductListingPage } from "$live/std/commerce/types.ts";
+import { ProductListingPage } from "deco-sites/std/commerce/types.ts";
 
 interface Props {
   filters: ProductListingPage["filters"];
