@@ -45,6 +45,9 @@ const options: Omit<Options, "selfURL"> = {
     "clip-path-polygon": {
       "clip-path": "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
     },
+    "skew-18":{
+        "transform": "skew(-18deg)"
+    }
   },
   theme: {
     extend: {
@@ -80,6 +83,7 @@ const options: Omit<Options, "selfURL"> = {
         },
       },
       backgroundImage: {
+        "newsletter-bg-mobile":"url('https://lojatamashii.vteximg.com.br/arquivos/newsletter-bg-mobile.png')",
         "newsletter-bg":
           "url('https://lojatamashii.vteximg.com.br/arquivos/newsletter-bg.png')",
         "eva-01":

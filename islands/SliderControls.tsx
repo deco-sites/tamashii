@@ -86,13 +86,10 @@ const SliderControls = (
           {Array(nOfPages)
             .fill(0)
             .map((_, id) => (
-              <button
+                <button
                 aria-label={`Display ${id} banner`}
-                class="p-2 mx-1 border w-[22px] h-[22px] active:transparent focus:outline-none text-white disabled:bg-[#ffffff] outline-none"
+                class="skew-18 p-2 mx-1 border w-[22px] h-[22px] active:transparent focus:outline-none text-white disabled:bg-[#ffffff] outline-none"
                 data-dot
-                style={{
-                  transform: "skew(-18deg);",
-                }}
               >
               </button>
             ))}

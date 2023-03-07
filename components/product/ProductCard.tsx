@@ -33,7 +33,7 @@ function ProductCard({
         <div class="mt-3 text-center">
           {name && (
             <div
-              class="block text-md font-bold text-white overflow-hidden whitespace-nowrap mb-3 h-[55px]"
+              class="block text-md font-bold text-white overflow-hidden mb-3 h-[55px]"
               style={{ textOverflow: "ellipsis" }}
               href={url}
             >

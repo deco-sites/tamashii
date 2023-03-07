@@ -17,11 +17,12 @@ import * as $$2 from "./islands/CartButton.tsx";
 import * as $$3 from "./islands/CartModal.tsx";
 import * as $$4 from "./islands/LiveControls.tsx";
 import * as $$5 from "./islands/Menu.tsx";
-import * as $$6 from "./islands/SearchControls.tsx";
-import * as $$7 from "./islands/ShelfTabs.tsx";
-import * as $$8 from "./islands/Slider.tsx";
-import * as $$9 from "./islands/SliderControls.tsx";
-import * as $$10 from "./islands/SliderImages.tsx";
+import * as $$6 from "./islands/ProductListItem.tsx";
+import * as $$7 from "./islands/SearchControls.tsx";
+import * as $$8 from "./islands/ShelfTabs.tsx";
+import * as $$9 from "./islands/Slider.tsx";
+import * as $$10 from "./islands/SliderControls.tsx";
+import * as $$11 from "./islands/SliderImages.tsx";
 import * as $$$0 from "./sections/Banner.tsx";
 import * as $$$1 from "./sections/BrandCarousel.tsx";
 import * as $$$2 from "./sections/BrandSection.tsx";
@@ -80,11 +81,12 @@ const manifest: DecoManifest = {
     "./islands/CartModal.tsx": $$3,
     "./islands/LiveControls.tsx": $$4,
     "./islands/Menu.tsx": $$5,
-    "./islands/SearchControls.tsx": $$6,
-    "./islands/ShelfTabs.tsx": $$7,
-    "./islands/Slider.tsx": $$8,
-    "./islands/SliderControls.tsx": $$9,
-    "./islands/SliderImages.tsx": $$10,
+    "./islands/ProductListItem.tsx": $$6,
+    "./islands/SearchControls.tsx": $$7,
+    "./islands/ShelfTabs.tsx": $$8,
+    "./islands/Slider.tsx": $$9,
+    "./islands/SliderControls.tsx": $$10,
+    "./islands/SliderImages.tsx": $$11,
   },
   sections: {
     "./sections/Banner.tsx": $$$0,
@@ -366,6 +368,16 @@ const manifest: DecoManifest = {
             "title": "Preload",
             "description":
               "Check this option when this banner is the biggest image on the screen for image optimizations",
+            "default": "false",
+          },
+          "breakOnMobile": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Break On Mobile",
+            "description": "Breaks the list on mobile",
+            "default": "false",
           },
         },
         "required": [],

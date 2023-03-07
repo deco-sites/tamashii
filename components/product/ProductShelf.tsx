@@ -21,7 +21,7 @@ function ProductShelf({
     const id = "product-shelf";
 
     return (
-        <div className="bg-[#1b1b1b] pb-[420px] mb-[-290px]">
+        <div className="bg-[#1b1b1b] pb-[200px] mb-[-200px]">
             <div className="container mx-auto">
                 {title && (
                     <h2 class="text-lg text-white md:text-3xl text-center font-gang">
@@ -32,15 +32,13 @@ function ProductShelf({
                 <div className="my-10 text-center">
                     <button
                         className="bg-[#ED1B23] text-white clip-path-polygon py-2 px-10 focus:outline-none"
-                        data-shelf-id="0"
-                    >
+                        data-shelf-id="0" >
                         Camisetas
                     </button>
                     <button
                         className="bg-[#ED1B23] text-white clip-path-polygon py-2 px-10 focus:outline-none"
-                        data-shelf-id="1"
-                    >
-                        Exclusívos
+                        data-shelf-id="1" >
+                        Exclusivos
                     </button>
                 </div>
                 {groups.map((group, index) => (
@@ -53,7 +51,7 @@ function ProductShelf({
                         <ProductList
                             products={group.products}
                             index={index}
-                            quantityProductPerPage={quantityProductPerPage}
+                            // quantityProductPerPage={quantityProductPerPage}
                             id={`${id}-${index}`}
                         />
                     </div>
